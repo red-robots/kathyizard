@@ -6,11 +6,10 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
         array(
-            'post_type' => 'team',
-            'menu_name' => 'Team',
-            'plural'    => 'Team',
-            'single'    => 'Team',
-            'menu_icon' => 'dashicons-groups',
+            'post_type' => 'speaks',
+            'menu_name' => 'Speaking',
+            'plural'    => 'Speaking',
+            'single'    => 'Speaking',
             'supports'  => array('title','editor','thumbnail')
         ),
         array(
