@@ -242,9 +242,6 @@ function generate_sitemap($menuNames=null) {
         print_r($sortedPages);
         
     }
-
-    
-
 }
 
 
@@ -377,7 +374,7 @@ function format_phone_number($string) {
     if (strpos($string, '+') !== false) {
         $append = '+';
     }
-    $string = preg_replace("/[^0-9]/", "", "705-666-8888" );
+    $string = preg_replace("/[^0-9]/", "", $string );
     $string = preg_replace('/\s+/', '', $string);
     return $append.$string;
 }
@@ -391,4 +388,19 @@ function get_instagram_setup() {
         $option = '';
     }
     return $option;
+}
+
+function get_social_media() {
+    $social = array();
+    $links['facebook'] = 'fab fa-facebook-f';
+    $links['twitter'] = 'fab fa-twitter';
+    $links['instagram'] = 'fab fa-instagram';
+    foreach($links as $k=>$icon) {
+        $val = get_field($k,'option');
+        $val = preg_replace('/\s+/', '', $val);
+        if($val) {
+            $social[] = array('icon'=>$icon,'field'=>$k,'url'=>$val);
+        }
+    }
+    return $social;
 }

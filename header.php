@@ -1,15 +1,4 @@
-<?php
-/**
- * The header for theme.
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package ACStarter
- */
-
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -25,29 +14,57 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<div id="page" class="site clear">
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="wrapper">
-			
-			<?php if( get_custom_logo() ) { ?>
-	            <div class="logo">
-	            	<?php the_custom_logo(); ?>
-	            </div>
-	        <?php } else { ?>
-	            <h1 class="logo">
-		            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-	            </h1>
-	        <?php } ?>
+	<?php  
+		$social_links = get_social_media(); /* extras.php */
+	?>
 
+	<header id="masthead" class="site-header clear" role="banner">
+		<a href="#" id="toggleMenu" class="mobile-menu">
+			<span class="sr">Menu</span>
+			<i></i>
+		</a>
+		<div class="mobileNav">
+			<a href="<?php echo get_site_url(); ?>" class="favicon"><img src="<?php echo get_bloginfo('template_url'); ?>/images/favicon.png" alt="Logo"></a>
+			<a href="<?php echo get_site_url(); ?>" class="sitename"><span><?php echo get_bloginfo('name'); ?></span></a>
+		</div>
+		<div class="nav">
+			<div class="wrapper top">
+				<?php if ($social_links) { ?>
+					<div class="social-media">
+						<?php foreach ($social_links as $s) { ?>
+							<a href="<?php echo $s['url']; ?>"><i class="<?php echo $s['icon']; ?>"></i><span class="sr"><?php echo $s['field']; ?></span></a>
+						<?php } ?>
+					</div>
+				<?php } ?>
 
+				<?php if( get_custom_logo() ) { ?>
+		            <div class="logo">
+		            	<?php the_custom_logo(); ?>
+		            </div>
+		        <?php } else { ?>
+		            <h1 class="logo">
+			            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+		            </h1>
+		        <?php } ?>
 
+		        <div class="contact">
+		        	<a class="hbtn" href="<?php echo get_site_url() ?>/contact/">Contact Kathy</a>
+		        </div>
+			</div><!-- wrapper -->
+
+		
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'MENU', 'acstarter' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
-	</div><!-- wrapper -->
+				<div class="wrapper">
+					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','container_class'=>'mainmenu' ) ); ?>
+				</div>
+			</nav>
+		</div>
+
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content wrapper">
+	<?php get_template_part('template-parts/slides'); ?>
+
+	<div id="content" class="site-content">

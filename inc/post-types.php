@@ -10,6 +10,15 @@ function js_custom_init() {
             'menu_name' => 'Speaking',
             'plural'    => 'Speaking',
             'single'    => 'Speaking',
+            'menu_icon' => 'dashicons-megaphone',
+            'supports'  => array('title','editor','thumbnail')
+        ),
+        array(
+            'post_type' => 'books',
+            'menu_name' => 'Books',
+            'plural'    => 'Books',
+            'single'    => 'Book',
+            'menu_icon' => 'dashicons-book-alt',
             'supports'  => array('title','editor','thumbnail')
         ),
         array(
@@ -17,6 +26,7 @@ function js_custom_init() {
             'menu_name' => 'Testimonials',
             'plural'    => 'Testimonials',
             'single'    => 'Testimonial',
+            'menu_icon' => 'dashicons-editor-quote',
             'supports'  => array('title','editor','thumbnail')
         ),
     );
