@@ -12,8 +12,8 @@ $slides = get_field('slides');
 	            </div>
 			<?php } ?>
 		</div>
-		<?php } ?>
 		<div class="numwrap"><div class="slidenum"></div></div>
+		<?php } ?>
 	</div>
 </div>
 <?php } ?>

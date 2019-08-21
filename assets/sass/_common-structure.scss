@@ -311,11 +311,18 @@ body {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: top center;
-		padding: 0px 15px;
+		padding: 30px 15px;
 		position: relative;
 		padding-top: 30px;
 		@include tab {
+			padding: 0px 15px;
 			height: 425px;
+		}
+		.owl-stage-outer {
+			padding-top: 0;
+			@include tab {
+				padding-top: 35px;
+			}
 		}
 		.item {
 			text-align: center;
@@ -368,38 +375,44 @@ body {
 	.numwrap {
 		position: absolute;
 		left: 0;
-		bottom: 20px;
+		bottom: -5px;
 		z-index: 100000;
 		width: 100%;
+		text-align: center;
 	}
 	.slidenum {
 		font-family: $font_secondary;
 		color: #FFF;
-		padding-left: 27px;
 		font-size: 13px;
 		font-weight: 700;
 		letter-spacing: 1px;
-		@include tab {
-			width: 600px;
-			margin: 0 auto;
-		}
+		display: inline-block;
+		position: relative;
+		top: -26px;
+		width: auto;
 	}
 	.owl-nav {
-		max-width: 600px;
+		width: 100%;
 		margin: 0 auto;
+		position: absolute;
+		bottom: 23px;
+		left: 0;
+		z-index: 30;
+		text-align: center;
 	}
 	#hero.owl-carousel {
 		.owl-prev,
 		.owl-next {
-			display: block;
+			display: inline-block;
 			width: 10px;
 			height: 10px;
 			border-left: 2px solid #fff;
 			border-bottom: 2px solid #fff;
 			border-top: none;
 			border-right: none;
-			position: absolute;
-			bottom: 25px;
+			position: relative;
+			// position: absolute;
+			// top: 0;
 			-webkit-appearance: none;
 			box-shadow: none;
 			outline: none;
