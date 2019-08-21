@@ -1755,7 +1755,7 @@ body{font-family:"Lusitana",serif;color:#666;font-size:18px;line-height:1.5}
 .aligncenter{clear:both;display:block;margin-left:auto;margin-right:auto}
 .flexrow{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;position:relative}
 .site-content{width:100%;float:left}
-.home .site-content{background-color:#f3f3f3;background-image:url("images/content.png");background-repeat:no-repeat;margin-top:-40px;padding:50px 0 40px;background-attachment:fixed}
+.home .site-content{background-color:#f3f3f3;background-image:url("images/content.png");background-repeat:no-repeat;margin-top:-40px;padding:50px 0 40px;background-attachment:scroll;background-position:0 0}
 .wrapper{max-width:1100px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px;position:relative}
 .logo{display:block;width:100%;position:relative;z-index:10}
 .logo a{display:inline-block;max-width:190px;width:100%}
