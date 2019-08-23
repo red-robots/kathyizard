@@ -107,41 +107,7 @@
 				</div>
 			</section>
 			<?php } ?>
-
-			<?php  
-				$books = get_field('books');
-				$count = ($books) ? count($books) : 0;
-				$colClass = ($count==3 || $count==6) ? 'cols3':'cols2';
-			?>
-			<?php if ($books) { ?>
-			<section class="section-forsale clear">
-				<div class="flexrow <?php echo $colClass?>">
-					<?php foreach ($books as $b) { 
-						$bimg = $b['image'];
-						$b_title = $b['title'];
-						$b_label = $b['button_label'];
-						$b_link = $b['button_link'];
-						$b_style = ($bimg) ? ' style="background-image:url('.$bimg['url'].')"':'';
-						$square = get_bloginfo('template_url') . '/images/px.png';
-						?>
-						<div class="bookinfo"<?php echo $b_style ?>>
-							<?php if ($b_title) { ?>
-							<div class="title"><span><?php echo $b_title ?></span></div>	
-							<?php } ?>
-
-							<?php if ($bimg) { ?>
-							<img src="<?php echo $square ?>" alt="" aria-hidden="true">
-							<?php } ?>
-							<?php if ($b_label && $b_link) { ?>
-							<div class="button">
-								<a href="<?php echo $b_link ?>" target="_blank" class="btn1"><?php echo $b_label ?></a>
-							</div>	
-							<?php } ?>	
-						</div>
-					<?php } ?>
-				</div>
-			</section>
-			<?php } ?>
+			
 
 		<?php endwhile;  ?>
 	</main><!-- #main -->
