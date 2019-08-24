@@ -85,12 +85,13 @@ get_header(); ?>
 				<?php if ($moore_photos) { ?>
 				<section class="moore-galleries clear">
 					<div class="row clear">
-						<?php foreach ($moore_photos as $p) {
+						<?php $g=1; foreach ($moore_photos as $p) {
+							$picId = $p['ID'];
 							$title = $p['title'];
 							$caption = $p['caption'];
 							$img = $p['url'];
 						?>
-						<div class="gallery" style="background-image:url('<?php echo $img; ?>')">
+						<div id="pic<?php echo $picId;?>" class="gallery" style="background-image:url('<?php echo $img; ?>')">
 							<img src="<?php echo $square ?>" alt="" aria-hidden="true">
 							<div class="caption">
 								<div class="wrap clear">
@@ -103,7 +104,7 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>	
-						<?php } ?>
+						<?php $g++; } ?>
 					</div>
 				</section>	
 				<?php } ?>

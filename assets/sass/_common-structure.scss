@@ -1451,8 +1451,10 @@ body.admin-bar {
 	}
 }
 .fancybox-content {
-	max-width: 70%!important;
-	max-height: 80%!important;
+	@include tab {
+		max-width: 70%!important;
+		max-height: 80%!important;
+	}
 }
 
 .moore-galleries {
@@ -1468,6 +1470,9 @@ body.admin-bar {
 		text-decoration: none;
 		cursor: pointer;
 		transition: all ease-out .3s;
+		&#pic203 {
+			background-position: top right;
+		}
 		@include tab {
 			width: 25%;
 		}
