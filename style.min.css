@@ -1990,7 +1990,7 @@ body{font-family:"Lusitana",serif;color:#666;font-size:18px;line-height:1.5}
 @media(min-width:768px){.fancybox-content{max-width:70% !important;max-height:80% !important}
 }.moore-galleries{margin-top:60px}
 .moore-galleries .gallery{display:block;width:50%;float:left;position:relative;background-size:cover;background-position:center;background-repeat:no-repeat;text-decoration:none;cursor:pointer;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
-.moore-galleries .gallery#pic203{background-position:top right}
+.moore-galleries .gallery#pic140{background-position:top right}
 @media(min-width:768px){.moore-galleries .gallery{width:25%}
 }.moore-galleries .gallery img{width:100%;height:auto;float:left}
 .moore-galleries .caption{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.85);display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:center;-ms-flex-wrap:center;flex-wrap:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all ease-out .3s;transition:all ease-out .3s;opacity:0;visibility:hidden}
