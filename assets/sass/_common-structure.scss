@@ -896,6 +896,9 @@ body.admin-bar {
     }
     .bio {
     	@include tab {
+    		padding-right: 355px;
+    	}
+    	@include desk {
     		padding-right: 30%;
     	}
     }
@@ -982,12 +985,15 @@ body.admin-bar {
 	float: left;
 	position: relative;
 	z-index: 10;
+	background: #f3f3f3;
+	padding: 30px 0;
 	@include tab {
 		max-width: 350px;
 		position: absolute;
 		top: 5%;
 		right: 0;
 		float: none;
+		padding: 0 0;
 	}
 	.photo {
 		width: 33.33%;
@@ -1007,9 +1013,10 @@ body.admin-bar {
 		padding: 0 10px;
 		text-align: center;
 		font-size: 11px;
+		line-height: 1.2;
+		width: 100%;
+		float: left;
 		@include tab {
-			width: 100%;
-			float: left;
 			text-align: right;
 			padding: 0 15px 0 0;
 		}

@@ -1896,7 +1896,8 @@ body{font-family:"Lusitana",serif;color:#666;font-size:18px;line-height:1.5}
 .page-fullwidth-image .entry-content:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-image:url("images/content.png");background-repeat:no-repeat;background-color:#f3f3f3}
 .page-fullwidth-image .entry-content.has-image:before{top:-50px}
 .page-fullwidth-image .entry-content .wrapper{position:relative;z-index:10}
-@media(min-width:768px){.page-fullwidth-image .entry-content .bio{padding-right:30%}
+@media(min-width:768px){.page-fullwidth-image .entry-content .bio{padding-right:355px}
+}@media(min-width:1200px){.page-fullwidth-image .entry-content .bio{padding-right:30%}
 }.page-fullwidth-image .entry-content a{color:#487497}
 .page-fullwidth-image .entry-content h6{font:700 12px/40px "Josefin Sans",sans-serif;color:#71b4d5;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;position:relative}
 .page-fullwidth-image .entry-content h6.list-title{margin-bottom:0;bottom:-2px}
@@ -1911,13 +1912,13 @@ body{font-family:"Lusitana",serif;color:#666;font-size:18px;line-height:1.5}
 .page-about .letter a:before{content:'';height:70px;width:90px;background-image:url(images/feather.png);background-repeat:no-repeat;background-size:contain;position:absolute;left:0;margin-right:0}
 .page-about .letter a:hover{color:#71b4d5}
 .page-about .letter a:hover .arrow{margin-right:-10px}
-.polaroids{max-width:100%;width:100%;margin:0 auto;float:left;position:relative;z-index:10}
-@media(min-width:768px){.polaroids{max-width:350px;position:absolute;top:5%;right:0;float:none}
+.polaroids{max-width:100%;width:100%;margin:0 auto;float:left;position:relative;z-index:10;background:#f3f3f3;padding:30px 0}
+@media(min-width:768px){.polaroids{max-width:350px;position:absolute;top:5%;right:0;float:none;padding:0}
 }.polaroids .photo{width:33.33%;float:left}
 @media(min-width:768px){.polaroids .photo{width:100%;margin-bottom:35px}
 }.polaroids .photo img{width:100%;height:auto;float:left}
-.polaroids .caption{display:block;padding:0 10px;text-align:center;font-size:11px}
-@media(min-width:768px){.polaroids .caption{width:100%;float:left;text-align:right;padding:0 15px 0 0}
+.polaroids .caption{display:block;padding:0 10px;text-align:center;font-size:11px;line-height:1.2;width:100%;float:left}
+@media(min-width:768px){.polaroids .caption{text-align:right;padding:0 15px 0 0}
 }.instagram-section{padding-top:3%;padding-bottom:6%;background:#f3f3f3}
 .instagram-section .section-title{font-family:"Hind",sans-serif;font-size:20px;font-weight:500;line-height:1.2;text-transform:uppercase;letter-spacing:1px;color:#487497;text-align:center}
 .instagram-section .section-title div{position:relative}
