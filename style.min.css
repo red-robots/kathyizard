@@ -1748,7 +1748,8 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-
 .clear:before,.clear:after{content:" ";display:table}
 .clear{*zoom:1}
 .clear{clear:both}
-a{-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+a{color:#487497;text-decoration:underline;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+a:hover{color:#71b4d5}
 body{font-family:"Lusitana",serif;color:#666;font-size:18px;line-height:1.5}
 .alignleft{display:inline;float:left;margin-right:1.5em}
 .alignright{display:inline;float:right;margin-left:1.5em}
@@ -1842,7 +1843,7 @@ body{font-family:"Lusitana",serif;color:#666;font-size:18px;line-height:1.5}
 .featured-book .col.right{background:#487497;color:#FFF}
 .featured-book .col.right .inside{padding:30px;width:100%;height:100%;position:relative;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .featured-book .col.right .t1{font-family:"Hind",sans-serif;color:#71b4d5;font-size:12px;text-transform:uppercase;margin:0}
-.featured-book .col.right .t2{font-family:"Josefin Sans",sans-serif;color:#bbd6d9 !important;text-align:left;font-size:24px !important;font-weight:normal;margin:2px 0 10px}
+.featured-book .col.right .t2{font-family:"Josefin Sans",sans-serif;color:#c4f7fd !important;text-align:left;font-size:24px !important;font-weight:normal;margin:2px 0 10px}
 .featured-book .col.right .desc{font-size:18px;line-height:1.4}
 .featured-book .col.right .desc p{margin-top:0}
 .featured-book .col.right .desc p:last-child{margin-bottom:0}
@@ -1891,18 +1892,18 @@ body{font-family:"Lusitana",serif;color:#666;font-size:18px;line-height:1.5}
 .site-footer .social-media{display:inline-block;float:right}
 .site-footer .social-media a{margin-left:3px;margin-right:3px}
 @media(min-width:768px){.site-footer .social-media a{margin-left:7px;margin-right:0}
-}.entry-content{background-color:#f3f3f3;padding:0 0 50px;background-attachment:scroll;background-position:0 0;position:relative}
-.entry-content:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-image:url("images/content.png");background-repeat:no-repeat;background-color:#f3f3f3}
-.entry-content.has-image:before{top:-50px}
-.entry-content .wrapper{position:relative;z-index:10}
-@media(min-width:768px){.entry-content .bio{padding-right:30%}
-}.entry-content a{color:#487497}
-.entry-content h6{font:700 12px/40px "Josefin Sans",sans-serif;color:#71b4d5;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;position:relative}
-.entry-content h6.list-title{margin-bottom:0;bottom:-2px}
-.entry-content h3{font:600 30px "Josefin Sans",sans-serif;color:#487497}
-.entry-content ul{margin-top:0}
-.entry-content p{margin-top:0;margin-bottom:25px}
-.entry-content p.last{margin-bottom:60px}
+}.page-fullwidth-image .entry-content{background-color:#f3f3f3;padding:0 0 50px;background-attachment:scroll;background-position:0 0;position:relative}
+.page-fullwidth-image .entry-content:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-image:url("images/content.png");background-repeat:no-repeat;background-color:#f3f3f3}
+.page-fullwidth-image .entry-content.has-image:before{top:-50px}
+.page-fullwidth-image .entry-content .wrapper{position:relative;z-index:10}
+@media(min-width:768px){.page-fullwidth-image .entry-content .bio{padding-right:30%}
+}.page-fullwidth-image .entry-content a{color:#487497}
+.page-fullwidth-image .entry-content h6{font:700 12px/40px "Josefin Sans",sans-serif;color:#71b4d5;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;position:relative}
+.page-fullwidth-image .entry-content h6.list-title{margin-bottom:0;bottom:-2px}
+.page-fullwidth-image .entry-content h3{font:600 30px "Josefin Sans",sans-serif;color:#487497}
+.page-fullwidth-image .entry-content ul{margin-top:0}
+.page-fullwidth-image .entry-content p{margin-top:0;margin-bottom:25px}
+.page-fullwidth-image .entry-content p.last{margin-bottom:60px}
 @media(min-width:768px){.page-about .entry-content.has-image{padding-bottom:2%}
 }.page-about .letter{margin-top:40px}
 .page-about .letter a{display:inline-block;text-decoration:none;font:700 12px/70px "Hind",sans-serif;color:#487497;text-transform:uppercase;position:relative;padding:0 50px 0 100px}
@@ -1963,6 +1964,41 @@ body{font-family:"Lusitana",serif;color:#666;font-size:18px;line-height:1.5}
 }.letterToReaders .letter-images .img{width:33.3%;float:left;padding:5px}
 @media(min-width:768px){.letterToReaders .letter-images .img{width:100%;margin-bottom:20px;padding:0}
 }.letterToReaders .letter-images img{width:100%;height:auto;float:left}
+.two-column-box{margin:30px 0 50px;position:relative}
+.two-column-box .col{width:100%;position:relative}
+@media(min-width:768px){.two-column-box .col{width:50%}
+}.two-column-box .col.right{background:#487497;color:#FFF;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:center;-ms-flex-wrap:center;flex-wrap:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.two-column-box .col.right .text{padding:6%;font-size:18px;line-height:1.4}
+.two-column-box .col.right h3{font-family:"Josefin Sans",sans-serif;color:#c4f7fd !important;text-align:left;font-size:25px !important;font-weight:normal;margin:2px 0 10px}
+.two-column-box .col.right h6{font-family:"Hind",sans-serif;font-weight:700;font-size:12px;line-height:1.3;color:#71b4d5;letter-spacing:2px;text-transform:uppercase;margin:0}
+.two-column-box .video{width:100%}
+.two-column-box .video a{display:block;width:100%;float:left;position:relative}
+.two-column-box .video img{width:100%;height:auto;float:left}
+.two-column-box .video .thumb{display:block;width:100%;height:100%;background-size:cover;background-position:center;background-repeat:no-repeat;position:absolute;top:0;left:0;z-index:5}
+.two-column-box .video .thumb:before{content:"";display:block;width:calc(100% - 30px);height:calc(100% - 30px);position:absolute;top:0;left:0;border:15px solid rgba(255,255,255,0.65)}
+.two-column-box .video .caption{position:absolute;bottom:0;left:0;width:100%;color:#666;z-index:10;padding:0 15px 15px 15px}
+.two-column-box .video .caption .inside{padding:15px 0 0;font-size:15px;line-height:1.3;background:rgba(255,255,255,0.65)}
+.two-column-box.row2 .col.left{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:center;-ms-flex-wrap:center;flex-wrap:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.two-column-box.row2 .col.left h3{font-family:"Josefin Sans",sans-serif;color:#487497 !important;text-align:left;font-size:25px !important;font-weight:normal;line-height:1.3;margin:2px 0 10px}
+@media(min-width:768px){.two-column-box.row2 .col.left .text2{padding-right:30px}
+}.two-column-box.row2 .col.left .text2 p{margin-top:0}
+.two-column-box.row2 .col.right{background:transparent}
+.two-column-box.row2 .col.right img{width:100%;height:auto}
+.two-column-box .featimage{position:relative;color:#666}
+.two-column-box .featimage .frame{padding:10px;background:#fbf6e4;box-shadow:0 0 8px 0 rgba(0,0,0,0.25)}
+.two-column-box .featimage .featcaption{font-size:14px;line-height:1.3;padding:4px 0 1px;text-align:center}
+.fancybox-content{max-width:70% !important;max-height:80% !important}
+.moore-galleries{margin-top:60px}
+.moore-galleries .gallery{display:block;width:50%;float:left;position:relative;background-size:cover;background-position:center;background-repeat:no-repeat;text-decoration:none;cursor:pointer;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+@media(min-width:768px){.moore-galleries .gallery{width:25%}
+}.moore-galleries .gallery img{width:100%;height:auto;float:left}
+.moore-galleries .caption{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(255,255,255,0.85);display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:center;-ms-flex-wrap:center;flex-wrap:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-transition:all ease-out .3s;transition:all ease-out .3s;opacity:0;visibility:hidden}
+.moore-galleries .caption .wrap{padding:20px;-webkit-transition:all ease-out .4s;transition:all ease-out .4s;margin-top:20px}
+.moore-galleries .caption .title{font-family:"Josefin Sans",sans-serif;font-size:25px;font-weight:400;line-height:1.3;color:#487497;margin:10px 0 5px}
+.moore-galleries .caption .text{margin-top:10px;font-size:15px;line-height:1.4}
+.moore-galleries .gallery:hover .caption{opacity:1;visibility:visible}
+.moore-galleries .gallery:hover .caption .wrap{margin-top:0}
+.bottom-video{margin-top:50px;margin-bottom:50px;width:100%;float:left}
 @media screen and (max-width:767px){.site-header .main-navigation .wrapper{padding-left:10px;padding-right:10px}
 .site-header .main-navigation .mainmenu{border-top:0}
 .site-header .nav{display:block;width:250px;background:#487497;position:absolute;top:42px;-webkit-transition:all ease .3s;transition:all ease .3s;right:-100%;height:450px;padding:15px 0 10px;z-index:-99}

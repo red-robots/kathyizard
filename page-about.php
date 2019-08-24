@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area clear page-about">
+	<div id="primary" class="content-area clear page-about page-fullwidth-image">
 		<main id="main" class="site-main clear" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

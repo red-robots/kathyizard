@@ -46,6 +46,11 @@ jQuery(document).ready(function ($) {
     	var item  = (event.item.index + 1) - event.relatedTarget._clones.length / 2;  
     	$('.slidenum').html(''+item+'/'+items+'');
 	}
+
+	$('[data-fancybox]').fancybox({
+		toolbar  : false,
+		smallBtn : true
+	});
 	
 	/*
 	*
