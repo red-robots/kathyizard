@@ -283,16 +283,24 @@ class WP_Image_Size_Limit {
     ?>
     <!-- .Custom Max Upload Size -->
     <style type="text/css">
-    .after-file-upload {
-      display: none;
-    }
-    <?php if ( $limit < $wplimit ) : ?>
-    .upload-flash-bypass:after {
-      content: 'Maximum image size: <?php echo $limit_output . $unit; ?>.';
-      display: block;
-      margin: 15px 0;
-    }
-    <?php endif; ?>
+      .after-file-upload {
+        display: none;
+      }
+      <?php if ( $limit < $wplimit ) : ?>
+      .upload-flash-bypass:after {
+        content: 'Maximum image size: <?php echo $limit_output . $unit; ?>.';
+        display: block;
+        margin: 15px 0;
+      }
+      <?php endif; ?>
+      
+      .acf-gallery .acf-field-text[data-name="alt"],
+      .acf-gallery .acf-field-textarea[data-name="description"] {
+        display: none!important;
+      }
+      .acf-gallery .acf-field-textarea[data-name="caption"] textarea {
+        height: 180px!important;
+      }
 
     </style>
     <!-- END Custom Max Upload Size -->

@@ -25,6 +25,31 @@ jQuery(document).ready(function ($) {
 		$(".letterToReaders").addClass('open');
 	});
 
+
+	/* Open a Letter to Readers Pop-up */
+	$(document).on('click','.opendiv', function(e){
+		e.preventDefault();
+		var href = $(this).attr('href');
+		if( $(href).length ) {
+			$(href).fadeIn();
+		}
+	});
+
+	$(document).on('click','#closepopup', function(e){
+		e.preventDefault();
+		$(".popupwrapper").fadeOut();
+	});
+
+	/* Speakings page */
+	if( $(".speaks").length ) {
+		$(".speaks").each(function(){
+			var title = $(this).find('.sptitle');
+			var h6Txt = $(this).find('h6');
+			h6Txt.insertAfter(title);
+		});
+	}
+
+	
 	$('#hero').owlCarousel({
 		center: true,
 	    items:1,

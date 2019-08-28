@@ -77,6 +77,52 @@ body {
 	clear: both;
 	@include center-block;
 }
+.button {
+	display: inline-block;
+    padding: 11px 20px 8px;
+    color: #999;
+    border: 1px solid #999;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-family: $font_secondary;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    &.lblue {
+		background: $light_blue;
+		color: #FFF!important;
+		border-color: $light_blue;
+		&:hover {
+			color: $light_blue!important;
+			background: #FFF;
+			border-color: $light_blue;
+		}
+    }
+    &.dblue {
+    	background: $dark_blue;
+		color: #FFF!important;
+		border-color: $dark_blue;
+		&:hover {
+			color: $dark_blue!important;
+			background: #FFF;
+			border-color: $dark_blue;
+		}
+    }
+}
+h6 {
+	font-family: $font_secondary;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 1.3;
+	color: $light_blue;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: 0 0;
+}
 .flexrow {
 	@include flexbox();
 	@include flexbox-wrap(wrap);
@@ -906,7 +952,10 @@ body.admin-bar {
 		color: $dark_blue;
 	}
 	h6 {
-		font: 700 12px/40px $font_heading;
+		font-family: $font_heading;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1.5;
 		color: $light_blue;
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -918,7 +967,8 @@ body.admin-bar {
 		}
 	}
 	h3 {
-		font: 600 30px $font_heading;
+		font-family: $font_heading;
+		font-weight: 600;
 		color: $dark_blue;
 	}
 	ul {
@@ -1145,6 +1195,7 @@ body.admin-bar {
 	position: relative;
 	width: 100%;
 	float: left;
+	margin-bottom: 20px;
 	.frame {
 		position: absolute;
 		top: 0;
@@ -1316,6 +1367,128 @@ body.admin-bar {
 	}
 }
 
+.page-speaking.page-fullwidth-image {
+	.entry-content {
+		width: 100%;
+		float: left;
+	}
+	.has-sidebar .textwrap {
+		width: 100%;
+		float: left;
+		@include tab {
+			width: 66%;
+		}
+	}
+	.sidebar-events {
+		background: $dark_blue;
+		color: #FFF;
+		font-size: 16px;
+		line-height: 1.4;
+		width: 100%;
+		float: left;
+		margin-top: 30px;
+		@include tab {
+			width: 30%;
+			float: right;
+		}
+		.wrap {
+			padding: 20px;
+		}
+		.intro {
+
+		}
+		h3.title {
+			margin: 0 0 3px;
+			color: $teal;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 1.3;
+		}
+		h6 {
+			font-family: $font_secondary;
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 1.2;
+			color: $light_blue;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin: 25px 0 15px;
+		}
+		ul.events {
+			margin: 0 0;
+			padding: 0 0;
+			list-style: none;
+			li {
+				margin: 25px 0;
+			}
+		}
+		ul.events li:first-child {
+			margin-top: 0;
+		}
+	}
+	.eventphotos {
+		margin-top: 30px;
+		width: 100%;
+		float: left;
+		@include tab {
+			width: 70%;
+		}
+		.picinfo {
+			width: 100%;
+			float: left;
+			margin-bottom: 35px;
+		}
+		.image {
+			display: block;
+			width: 100%;
+			float: left;
+			img {
+				width: 100%;
+				height: auto;
+				float: left;
+				border: 10px solid #FFF;
+			}
+		}
+		.image a {
+			display: block;
+			float: left;
+		}
+		h6 {
+			margin-top: 0;
+		}
+	}
+}
+.speakings-section {
+	width: 100%;
+	float: left;
+	background-color: #f3f3f3;
+	padding-bottom: 80px;
+	.speaks:first-child {
+		margin-top: 20px;
+		padding-top: 20px;
+	}
+	.speaks {
+		margin-top: 40px;
+		margin-bottom: 20px;
+		padding-top: 20px;
+		position: relative;
+		width: 100%;
+		float: left;
+		&:before {
+			content:'\201C';
+			display: inline-block;
+			font-family: $font_secondary;
+			font-size: 100px;
+			line-height: 1;
+			color: $light_blue;
+			position: absolute;
+			top: -8px;
+			left: 0;
+		}
+	}
+}	
+
+
 .two-column-box {
 	margin: 30px 0 50px;
 	position: relative;
@@ -1357,7 +1530,11 @@ body.admin-bar {
 			margin: 0 0;
 		}
 	}
-
+	.col.full {
+		width: 100%;
+	}
+	
+	.media,
 	.video {
 		width: 100%;
 		a {
@@ -1457,6 +1634,7 @@ body.admin-bar {
 		}
 	}
 }
+
 .fancybox-content {
 	@include tab {
 		max-width: 70%!important;
@@ -1464,11 +1642,12 @@ body.admin-bar {
 	}
 }
 
+.galleries-section,
 .moore-galleries {
 	margin-top: 60px;
 	.gallery {
 		display: block;
-		width: 50%;
+		width: 100%;
 		float: left;
 		position: relative;
 		background-size: cover;
@@ -1481,6 +1660,12 @@ body.admin-bar {
 			background-position: top right;
 		}
 		@include tab {
+			width: 50%;
+		}
+		@include mid {
+			width: 33.3%;
+		}
+		@include desk {
 			width: 25%;
 		}
 		img {
@@ -1495,7 +1680,7 @@ body.admin-bar {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background: rgba(255,255,255,.85);
+		background: rgba(255,255,255,.88);
 		@include flexbox();
 		@include flexbox-wrap(center);
 		@include flexbox-align-items(center);
@@ -1503,6 +1688,7 @@ body.admin-bar {
 		opacity: 0;
 		visibility: hidden;
 		.wrap {
+			background: rgba(255,255,255,.1);
 			padding: 20px;
 			transition: all ease-out .4s;
 			margin-top: 20px;
@@ -1520,6 +1706,18 @@ body.admin-bar {
 			font-size: 15px;
 			line-height: 1.4;
 		}
+		h6 {
+			font-family: $font_secondary;
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 1.2;
+			color: $light_blue;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin: 0 0 15px;
+			position: relative;
+			top: -6px;
+		}
 	}
 	.gallery:hover {
 		.caption {
@@ -1536,6 +1734,86 @@ body.admin-bar {
 	margin-bottom: 50px;
 	width: 100%;
 	float: left;
+}
+
+.popupwrapper {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.85);
+	z-index: 10000;
+	padding: 30px;
+	.popup-close {
+		width: 100%;
+		position: fixed;
+		top: 30px;
+		left: 0;
+		z-index: 10;
+	}
+	.popup-close div,
+	.popup-middle {
+		max-width: 1000px;
+		width: 100%;
+		margin: 0 auto;
+		background: #FFF;
+		border-radius: 5px;
+	}
+	.popup-middle {
+		border-radius: 5px;
+		background: #FFF;
+		overflow: scroll;
+		height: 100%;
+	}
+	.popup-close div  {
+		text-align: right;
+		a {
+			display: inline-block;
+			text-decoration: none;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			border-radius: 100%;
+			border: 1px solid $dark_blue;
+			color: $dark_blue;
+			position: relative;
+		    top: 15px;
+		    right: 15px;
+			span {
+				font-family: $font_secondary;
+				font-weight: 700;
+				position: relative;
+				font-size: 18px;
+				line-height: 1;
+			}
+			&:hover {
+				background: $dark_blue;
+				color: #FFF;
+			}
+		}
+	}
+	.popup-middle {
+		box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.5);
+	}
+	.inside {
+		padding: 50px 20px 20px;
+	}
+	.toptitle {
+		text-align: center;
+		margin-bottom: 30px;
+		font-size: 15px;
+	}
+	.event-info {
+		margin-bottom: 35px;
+	}
+	.event-info h6 {
+		margin-bottom: 10px;
+	}
+	.event-info p {
+		margin-top: 0;
+	}
 }
 
 /* Mobile */
