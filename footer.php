@@ -26,7 +26,7 @@
 <?php wp_footer(); ?>
 
 <?php  
-if( is_page('about-me') ) {
+if( is_page('about-me') || is_page('contact') ) {
 	get_template_part('inc/instagram_script');
 }
 ?>

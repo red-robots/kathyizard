@@ -84,6 +84,14 @@ get_header(); ?>
 				</div>
 			</section>
 
+			<?php /* INSTAGRAM FEEDS */ ?>
+			<section class="instagram-section clear">
+				<div class="wrapper">
+					<div id="insta_title" class="section-title"></div>
+					<div id="instagram_feeds" class="instagramfeeds"></div>
+				</div>
+			</section>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

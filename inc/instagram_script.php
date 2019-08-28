@@ -63,7 +63,7 @@ if($setup) {
                                 //$("#instagram_feeds").append(content);
                             });
 
-                            var insta_title = '<div><a href="'+instagram_link+'" target="_blank"><i class="fab fa-instagram ig-icon"></i><span>Follow Us on Instagram</span></a></div>';
+                            var insta_title = '<div><a href="'+instagram_link+'" target="_blank"><i class="fab fa-instagram ig-icon"></i><span>Follow Kathy on Instagram</span></a></div>';
                             $("#instagram_feeds").html(content);
                             $("#insta_title").html(insta_title);
                         }
