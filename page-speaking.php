@@ -37,113 +37,115 @@ get_header(); ?>
 					$photos = get_field('photos');
 					$past_events = get_field('past_events');
 				?>
+			
+				<div class="mug-container">
+					<div class="entry-content clear <?php echo $has_top_image;?> <?php echo $has_sidebar;?>">
+						<div class="wrapper">
+							<div class="textwrap">
+								<div class="maintext"><?php the_content(); ?></div>
+								<?php if ($photos) { ?>
+								<div class="eventphotos">
+									<?php foreach ($photos as $pp) { 
+										$eetitle = $pp['title'];
+										$eeimage = $pp['image'];
+										$eelink = $pp['link'];
+										$e_beforelink = '';
+										$e_afterlink = '';
+										if($eelink) {
+											$e_beforelink = '<a href="'.$eelink.'" target="_blank">';
+											$e_afterlink = '</a>';
+										}
+										if ($eetitle && $eeimage) { ?>
+										<div class="picinfo">
+											<h6 class="pictitle"><?php echo $eetitle ?></h6>
+											<span class="image">
+												<?php echo $e_beforelink; ?><img src="<?php echo $eeimage['url'] ?>" alt="<?php echo $eeimage['title'] ?>" /><?php echo $e_afterlink; ?>
+											</span>
+										</div>	
+										<?php } ?>
+									<?php } ?>
+								</div>	
+								<?php } ?>
+							</div>
 
-				<div class="entry-content clear <?php echo $has_top_image;?> <?php echo $has_sidebar;?>">
-					<div class="wrapper">
-						<div class="textwrap">
-							<div class="maintext"><?php the_content(); ?></div>
-							<?php if ($photos) { ?>
-							<div class="eventphotos">
-								<?php foreach ($photos as $pp) { 
-									$eetitle = $pp['title'];
-									$eeimage = $pp['image'];
-									$eelink = $pp['link'];
-									$e_beforelink = '';
-									$e_afterlink = '';
-									if($eelink) {
-										$e_beforelink = '<a href="'.$eelink.'" target="_blank">';
-										$e_afterlink = '</a>';
-									}
-									if ($eetitle && $eeimage) { ?>
-									<div class="picinfo">
-										<h6 class="pictitle"><?php echo $eetitle ?></h6>
-										<span class="image">
-											<?php echo $e_beforelink; ?><img src="<?php echo $eeimage['url'] ?>" alt="<?php echo $eeimage['title'] ?>" /><?php echo $e_afterlink; ?>
-										</span>
+							<?php if ($intro || $upcoming_events) { ?>
+							<div class="sidebar-events">
+								<div class="wrap">
+									<?php if ($intro) { ?>
+									<div class="intro"><?php echo $intro ?></div>	
+									<?php } ?>
+									
+									<?php if ($upcoming_events) { ?>
+										<h6>Upcoming Events</h6>
+										<ul class="events">
+										<?php foreach ($upcoming_events as $e) { 
+											$e_title = $e['title'];
+											$e_description = $e['description'];
+											?>
+											<li>
+												<?php if ($e_title) { ?>
+												<h3 class="title"><?php echo $e_title ?></h3>
+												<?php } ?>
+												<?php if ($e_description) { ?>
+												<div class="details"><?php echo $e_description ?></div>
+												<?php } ?>
+											</li>
+										<?php } ?>
+										</ul>
+									<?php } ?>
+
+									<?php if ($past_events) { ?>
+									<div class="buttondiv"><a href="#speakingExperience" class="button lblue opendiv">Past Events</a></div>
+									<?php } ?>
+								</div>
+							</div>
+							<?php } ?>
+						</div>
+					</div>
+
+					<?php if ($past_events) { ?>
+						<div id="speakingExperience" class="popupwrapper past-events">
+							<div class="popup-close"><div><a href="#" id="closepopup"><span>x</span></a></div></div>
+							<div class="popup-middle">
+								<div class="inside clear">
+									<h6 class="toptitle">KATHY IZARD SPEAKING EXPERIENCE</h6>
+								<?php foreach ($past_events as $pe) { 
+									$p_title = $pe['past_title'];
+									$p_info = $pe['past_info'];
+									if ($p_title) { ?>
+									<div class="event-info">
+										<h6 class="eventname"><?php echo $p_title ?></h6>
+										<div class="info"><?php echo $p_info ?></div>
 									</div>	
 									<?php } ?>
 								<?php } ?>
-							</div>	
-							<?php } ?>
-						</div>
-
-						<?php if ($intro || $upcoming_events) { ?>
-						<div class="sidebar-events">
-							<div class="wrap">
-								<?php if ($intro) { ?>
-								<div class="intro"><?php echo $intro ?></div>	
-								<?php } ?>
-								
-								<?php if ($upcoming_events) { ?>
-									<h6>Upcoming Events</h6>
-									<ul class="events">
-									<?php foreach ($upcoming_events as $e) { 
-										$e_title = $e['title'];
-										$e_description = $e['description'];
-										?>
-										<li>
-											<?php if ($e_title) { ?>
-											<h3 class="title"><?php echo $e_title ?></h3>
-											<?php } ?>
-											<?php if ($e_description) { ?>
-											<div class="details"><?php echo $e_description ?></div>
-											<?php } ?>
-										</li>
-									<?php } ?>
-									</ul>
-								<?php } ?>
-
-								<?php if ($past_events) { ?>
-								<div class="buttondiv"><a href="#pastevents" class="button lblue">Past Events</a></div>
-								<?php } ?>
+								</div>
 							</div>
 						</div>
-						<?php } ?>
-					</div>
-				</div>
+					<?php } ?>
+				<?php endwhile;  ?>
 
-				<?php if ($past_events) { ?>
-					<div id="speakingExperience" class="popupwrapper past-events">
-						<div class="popup-close"><div><a href="#" id="closepopup"><span>x</span></a></div></div>
-						<div class="popup-middle">
-							<div class="inside clear">
-								<h6 class="toptitle">KATHY IZARD SPEAKING EXPERIENCE</h6>
-							<?php foreach ($past_events as $pe) { 
-								$p_title = $pe['past_title'];
-								$p_info = $pe['past_info'];
-								if ($p_title) { ?>
-								<div class="event-info">
-									<h6 class="eventname"><?php echo $p_title ?></h6>
-									<div class="info"><?php echo $p_info ?></div>
-								</div>	
-								<?php } ?>
-							<?php } ?>
+				<?php /* Speaking Posts */ ?>
+				<?php  
+				$args = array(
+					'posts_per_page'=> -1,
+					'post_type'		=> 'speaks',
+					'post_status'	=> 'publish'
+				);
+				$theposts = new WP_Query($args);
+				if ( $theposts->have_posts() ) {  ?>
+				<section class="speakings-section clear">
+					<div class="wrapper">
+						<?php while ( $theposts->have_posts() ) : $theposts->the_post();  ?>
+							<div class="speaks">
+								<div class="spdesc"><?php the_content(); ?></div>
+								<div class="titlediv"><h6 class="sptitle"><?php the_title(); ?></h6></div>
 							</div>
-						</div>
+						<?php endwhile; wp_reset_postdata(); ?>
 					</div>
+				</section>
 				<?php } ?>
-			<?php endwhile;  ?>
-
-			<?php /* Speaking Posts */ ?>
-			<?php  
-			$args = array(
-				'posts_per_page'=> -1,
-				'post_type'		=> 'speaks',
-				'post_status'	=> 'publish'
-			);
-			$theposts = new WP_Query($args);
-			if ( $theposts->have_posts() ) {  ?>
-			<section class="speakings-section clear">
-				<div class="wrapper">
-					<?php while ( $theposts->have_posts() ) : $theposts->the_post();  ?>
-						<div class="speaks">
-							<div class="spdesc"><?php the_content(); ?></div>
-							<div class="titlediv"><h6 class="sptitle"><?php the_title(); ?></h6></div>
-						</div>
-					<?php endwhile; wp_reset_postdata(); ?>
-				</div>
-			</section>
-			<?php } ?>
+			</div><!-- .mug-container-->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

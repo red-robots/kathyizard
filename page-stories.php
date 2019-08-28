@@ -95,37 +95,6 @@ get_header(); ?>
 				</section>	
 				<?php } ?>
 
-				<?php  
-				$row4 = get_field('row4');
-				$r3_video_thumbnail = $row4['r3_video_thumbnail'];
-				$r3_video_link = $row4['r3_video_link'];
-				$r3_video_caption = $row4['r3_video_caption'];
-				?>
-	
-				<section class="bottom-video">
-					<div class="wrapper">
-						<div class="two-column-box clear">
-							<div class="flexrow">
-								<div class="col left">
-									<?php if ($r3_video_link && $r3_video_thumbnail) { ?>
-									<div class="video">
-										<a data-fancybox href="<?php echo $r3_video_link; ?>" target="_blank">
-											<img src="<?php echo $square ?>" alt="" aria-hidden="true">
-											<span class="thumb" style="background-image:url(<?php echo $r3_video_thumbnail['url']; ?>)"></span>
-										</a>
-									</div>
-									<?php } ?>
-								</div>
-								<div class="col right">
-									<?php if ($r3_video_caption) { ?>
-										<div class="text"><?php echo $r3_video_caption ?></div>	
-									<?php } ?>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>	
-
 			<?php endwhile; ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
