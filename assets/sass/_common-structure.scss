@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i|Lusitana:400,700|Noto+Serif:400,400i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700|Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i|Lusitana:400,700|Noto+Serif:400,400i,700,700i|EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i&display=swap');
 div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
 	overflow-wrap: normal;
     word-wrap: normal;
@@ -48,6 +48,8 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
+.nomb{margin-bottom:0!important;}
+.nomt{margin-top:0!important;}
 .clear:before, .clear:after { content: " "; display: table; }.clear { *zoom: 1; } .clear {clear: both;}
 a {
 	color: $dark_blue;
@@ -122,6 +124,13 @@ h6 {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	margin: 0 0;
+}
+h3 {
+	font-family: $font_heading;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 1.3;
+	color: $light_blue;
 }
 .flexrow {
 	@include flexbox();
@@ -321,6 +330,7 @@ body.admin-bar {
 			padding: 27px 0 22px;
 		}
 	}
+	.menu li.current_page_item > a,
 	.menu > li:hover > a {
 		color: $light_blue;
 	}
@@ -660,7 +670,7 @@ body.admin-bar {
 				margin-bottom: 0;
 			}
 		}
-		.button {
+		.buttondiv {
 			margin-top: 30px;
 			text-align: center;
 			@include tab {
@@ -714,7 +724,7 @@ body.admin-bar {
 		@include flexbox();
 		@include flexbox-align-items(center);
 	}
-	.button {
+	.buttondiv {
 		text-align: center;
 		margin-top: 25px;
 		a {
@@ -1531,6 +1541,9 @@ body.admin-bar {
 			padding: 6%;
 			font-size: 18px;
 			line-height: 1.4;
+			&.text2 {
+				padding: 10% 6%;
+			}
 		}
 		h3 {
 			font-family: $font_heading;
@@ -1658,11 +1671,27 @@ body.admin-bar {
 
 .fancybox-content {
 	@include tab {
-		max-width: 70%!important;
-		max-height: 80%!important;
+		max-width: 60%!important;
+		max-height: 85%!important;
 	}
 }
-
+.fancybox-slide--iframe .fancybox-content {
+	border-radius: 6px;
+	background: #FFF;
+	border: 4px solid #FFF;
+}
+.fancybox-close-small {
+	background: #000;
+	border-radius: 100%;
+	color: #FFF;
+	border: 3px solid #FFF;
+	width: 33px;
+	height: 33px;
+	opacity: 1;
+	padding: 4px;
+	top: -20px;
+	right: -15px;
+}
 .galleries-section,
 .moore-galleries {
 	margin-top: 60px;
@@ -1828,7 +1857,7 @@ body.admin-bar {
 	}
 	.event-info {
 		font-family: $font_cursive;
-		font-size: 15px;
+		font-size: 14px;
 		line-height: 1.6;
 		margin-bottom: 35px;
 	}
@@ -1837,6 +1866,152 @@ body.admin-bar {
 	}
 	.event-info p {
 		margin-top: 0;
+	}
+}
+.page-media {
+
+}
+h3.sectionTitle {
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+.imageboxes {
+	margin-bottom: 20px;
+	.imgbox {
+		width: 50%;
+		padding: 10px;
+		text-align: center;
+		@include flexbox();
+		@include flexbox-align-items(center);
+		@include flexbox-align-content(center);
+		@include flexbox-justify(center);
+		@include tab {
+			width: 25%;
+		}
+		a {
+			display: block;
+			float: left;
+		}
+		img {
+			max-width: 200px;
+			max-height: 100px;
+			width: auto;
+			height: auto;
+			float: left;
+		}
+	}
+}
+.videoboxes {
+	padding-bottom: 50px;
+	.imgbox {
+		width: 50%;
+		padding: 10px;
+		@include tab {
+			width: 50%;
+		}
+		@include mid {
+			width: 33.3%;
+		}
+		.imglink {
+			display: block;
+			float: left;
+			width: 100%;
+		}
+		.imgwrap {
+			display: block;
+			float: left;
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+		.txtwrap {
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $dark_blue;
+			color: #FFF;
+			z-index: 5;
+			@include flexbox();
+			@include flexbox-align-items(center);
+			@include flexbox-align-content(center);
+			@include flexbox-justify(center);
+			.wrap {
+				padding: 20px;
+				.mtitle {
+					color: $teal;
+					margin-bottom: 15px;
+				}
+				p {
+					margin-top: 0;
+					margin-bottom: 10px;
+					font-size: 16px;
+					line-height: 1.3;
+				}
+				a {
+					display: inline-block!important;
+					color: $teal;
+				}
+			}
+		}
+		img {
+			width: 100%;
+			height: auto;
+			float: left;
+			position: relative;
+		}
+		.play {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			@include flexbox();
+			@include flexbox-align-items(center);
+			@include flexbox-align-content(center);
+			@include flexbox-justify(center);
+			transition: all ease-out .3s;
+			span {
+				display: inline-block;
+				width: 70px;
+				height: 70px;
+				border-radius: 100%;
+				background: rgba(255,255,255,.25);
+				border: 1px solid #FFF;
+				position: relative;
+				transition: all ease-out .3s;
+				&:before {
+					content: "";
+					display: inline-block;
+					width: 0;
+					height: 0;
+					border-left: 27px solid #FFF;
+					border-top: 18px solid transparent;
+					border-bottom: 18px solid transparent;
+					position: absolute;
+					top: 16px;
+					left: 26px;
+					transition: all ease-out .3s;
+				}
+			}
+		}
+		a:hover .play {
+			span {
+				background: rgba(31, 137, 222, 0.6);
+			}
+		}
+	}
+	.caption {
+		width: 100%;
+		float: left;
+		padding: 10px 0;
+		font-size: 15px;
+		line-height: 1.4;
 	}
 }
 

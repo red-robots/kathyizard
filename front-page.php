@@ -34,7 +34,7 @@
 								<?php } ?>
 
 								<?php if ($button_label && $button_link) { ?>
-								<div class="button">
+								<div class="buttondiv">
 									<a href="<?php echo $button_link ?>" target="_blank" class="btn1"><?php echo $button_label ?></a>
 								</div>	
 								<?php } ?>
@@ -68,7 +68,7 @@
 						<div class="mid">
 							<?php echo $news_excerpt; ?>
 							<?php if ($news_button_label && $news_button_link) { ?>
-							<div class="button">
+							<div class="buttondiv">
 								<a href="<?php echo $news_button_link ?>" target="_blank" class="btn1"><?php echo $news_button_label ?></a>
 							</div>	
 							<?php } ?>	

@@ -20,15 +20,7 @@ function js_custom_init() {
             'single'    => 'Book',
             'menu_icon' => 'dashicons-book-alt',
             'supports'  => array('title','editor','thumbnail')
-        ),
-        array(
-            'post_type' => 'testimonial',
-            'menu_name' => 'Testimonials',
-            'plural'    => 'Testimonials',
-            'single'    => 'Testimonial',
-            'menu_icon' => 'dashicons-editor-quote',
-            'supports'  => array('title','editor','thumbnail')
-        ),
+        )
     );
     
     if($post_types) {

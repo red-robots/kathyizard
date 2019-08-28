@@ -34,7 +34,7 @@ get_header(); ?>
 								<?php if ($row1_image) { ?>
 								<div class="media">
 									<?php echo $row1_before_link; ?>
-									<img src="<?php echo $square ?>" alt="" aria-hidden="true">
+									<img src="<?php echo $px2 ?>" alt="" aria-hidden="true">
 									<span class="thumb" style="background-image:url(<?php echo $row1_image['url']; ?>)"></span>
 									<?php echo $row1_after_link; ?>
 								</div>
@@ -42,7 +42,7 @@ get_header(); ?>
 							</div>
 							<div class="col right">
 								<?php if ($row1_content) { ?>
-									<div class="text"><?php echo $row1_content ?></div>	
+									<div class="text text2"><?php echo $row1_content ?></div>	
 								<?php } ?>
 							</div>
 						</div>
