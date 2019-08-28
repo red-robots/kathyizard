@@ -72,23 +72,9 @@ jQuery(document).ready(function ($) {
     	$('.slidenum').html(''+item+'/'+items+'');
 	}
 
-	// $('[data-fancybox]').fancybox({
-	// 	toolbar  : false,
-	// 	smallBtn : true
-	// });
-
 	$('[data-fancybox]').fancybox({
 		toolbar  : false,
-		smallBtn : true,
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
+		smallBtn : true
 	});
 	
 	/*

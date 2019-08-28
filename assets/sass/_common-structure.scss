@@ -1670,9 +1670,11 @@ body.admin-bar {
 }
 
 .fancybox-content {
-	@include tab {
+	max-width: 100% !important;
+    max-height: 80%;
+	@include desk {
 		max-width: 60%!important;
-		max-height: 85%!important;
+		max-height: 80%!important;
 	}
 }
 .fancybox-slide--iframe .fancybox-content {

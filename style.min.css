@@ -2023,7 +2023,8 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 .two-column-box .featimage{position:relative;color:#666}
 .two-column-box .featimage .frame{padding:10px;background:#fbf6e4;box-shadow:0 0 8px 0 rgba(0,0,0,0.25)}
 .two-column-box .featimage .featcaption{font-size:14px;line-height:1.3;padding:4px 0 1px;text-align:center}
-@media(min-width:700px){.fancybox-content{max-width:60% !important;max-height:85% !important}
+.fancybox-content{max-width:100% !important;max-height:80%}
+@media(min-width:1200px){.fancybox-content{max-width:60% !important;max-height:80% !important}
 }.fancybox-slide--iframe .fancybox-content{border-radius:6px;background:#FFF;border:4px solid #FFF}
 .fancybox-close-small{background:#000;border-radius:100%;color:#FFF;border:3px solid #FFF;width:33px;height:33px;opacity:1;padding:4px;top:-20px;right:-15px}
 .galleries-section,.moore-galleries{margin-top:60px}
