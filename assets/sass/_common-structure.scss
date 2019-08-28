@@ -995,6 +995,14 @@ body.admin-bar {
 	}
 }
 
+.entry-title {
+	font-family: $font_heading;
+	font-size: 28px;
+	font-weight: 600;
+	margin: 20px 0 20px;
+	color: $dark_blue;
+}
+
 .page-about {
 	.entry-content.has-image {
 		@include tab {
@@ -1398,53 +1406,6 @@ body.admin-bar {
 			width: 66%;
 		}
 	}
-	.sidebar-events {
-		background: $dark_blue;
-		color: #FFF;
-		font-size: 16px;
-		line-height: 1.4;
-		width: 100%;
-		float: left;
-		margin-top: 30px;
-		@include tab {
-			width: 30%;
-			float: right;
-		}
-		.wrap {
-			padding: 20px;
-		}
-		.intro {
-
-		}
-		h3.title {
-			margin: 0 0 3px;
-			color: $teal;
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 1.3;
-		}
-		h6 {
-			font-family: $font_secondary;
-			font-weight: 700;
-			font-size: 12px;
-			line-height: 1.2;
-			color: $light_blue;
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			margin: 25px 0 15px;
-		}
-		ul.events {
-			margin: 0 0;
-			padding: 0 0;
-			list-style: none;
-			li {
-				margin: 25px 0;
-			}
-		}
-		ul.events li:first-child {
-			margin-top: 0;
-		}
-	}
 	.eventphotos {
 		margin-top: 30px;
 		width: 100%;
@@ -1475,6 +1436,53 @@ body.admin-bar {
 		h6 {
 			margin-top: 0;
 		}
+	}
+}
+.sidebar-events {
+	background: $dark_blue;
+	color: #FFF;
+	font-size: 16px;
+	line-height: 1.4;
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+	@include tab {
+		width: 30%;
+		float: right;
+	}
+	.wrap {
+		padding: 20px;
+	}
+	.intro {
+
+	}
+	h3.title {
+		margin: 0 0 3px;
+		color: $teal;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.3;
+	}
+	h6 {
+		font-family: $font_secondary;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1.2;
+		color: $light_blue;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		margin: 25px 0 15px;
+	}
+	ul.events {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		li {
+			margin: 25px 0;
+		}
+	}
+	ul.events li:first-child {
+		margin-top: 0;
 	}
 }
 .mug-container {
@@ -2014,6 +2022,44 @@ h3.sectionTitle {
 		padding: 10px 0;
 		font-size: 15px;
 		line-height: 1.4;
+	}
+}
+.page-contact {
+	.entry-content {
+		width: 100%;
+		float: left;
+	}
+	.textwrap {
+		width: 100%;
+		float: left;
+		margin-bottom: 30px;
+		@include tab {
+			width: 60%;
+		}
+	}
+	.sidebardiv {
+		color: $light_blue;
+		background: $dark_blue;
+		@include tab {
+			width: 38%;
+			float: right;
+		}
+		.wrap {
+			padding: 20px;
+			color: $teal;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1.5;
+			text-align: center;
+			h3 {
+				color: $teal;
+				font-size: 22px;
+				font-weight: 400;
+			}
+			a {
+				color: $teal;
+			}
+		}
 	}
 }
 
