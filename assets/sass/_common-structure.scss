@@ -2305,6 +2305,21 @@ h3.sectionTitle {
 	float: left;
 	background: $grey;
 }
+.error-404 {
+	min-height: 30em;
+	text-align: center;
+	.page-header {
+		margin-top: 10%;
+	}
+	h1 {
+		font-family: $font_heading;
+		font-size: 35px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: $dark_blue;
+		margin: 0 0;
+	}
+}
 /* Mobile */
 @media screen and (max-width:767px) {
 	.site-header {
