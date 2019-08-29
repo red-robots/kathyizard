@@ -2213,10 +2213,12 @@ h3.sectionTitle {
 }
 .reviews-wrapper {
 	.review {
-		margin-top: 50px;
-		margin-bottom: 50px;
+		margin-top: 30px;
+		margin-bottom: 30px;
 		padding-top: 20px;
 		position: relative;
+		width: 100%;
+		float: left;
 		&:before {
 			content: '\201C';
 			display: inline-block;
@@ -2297,7 +2299,11 @@ h3.sectionTitle {
 }
 
 .page-bottom-text {
-	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	width: 100%;
+	float: left;
+	background: $grey;
 }
 /* Mobile */
 @media screen and (max-width:767px) {

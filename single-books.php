@@ -105,7 +105,7 @@ get_header(); ?>
 				<div class="pagecontent clear <?php echo ($topimgurl) ? 'imagetextcol':'framed';?>">
 					<div class="inner wrapper clear">
 
-						<div class="outerwrap <?php echo (has_post_thumbnail()) ? 'texthalf':'textfull';?>">
+						<div class="outerwrap clear <?php echo (has_post_thumbnail()) ? 'texthalf':'textfull';?>">
 						
 							<div class="textwrap">
 								<?php the_content(); ?>
@@ -162,23 +162,25 @@ get_header(); ?>
 						<?php if ($more_reviews) { ?>
 						<div class="buttondiv"><a href="#morequotes" class="button lblue opendiv">Read More Quotes</a></div>	
 						<?php } ?>
-
-						<?php 
-							$rs_title = get_field('rs_title'); 
-							$rs_text = get_field('rs_text'); 
-						?>
-						<?php if ($rs_text) { ?>
-						<section class="page-bottom-text clear">
-							<div class="textwrap">
-								<?php if ($rs_title) { ?>
-								<h3><?php echo $rs_title ?></h3>
-								<?php } ?>
-								<?php echo $rs_text ?>
-							</div>
-						</section>	
-						<?php } ?>
 					</div>
 				</div>
+
+				<?php 
+					$rs_title = get_field('rs_title'); 
+					$rs_text = get_field('rs_text'); 
+				?>
+				<?php if ($rs_text) { ?>
+				<section class="page-bottom-text clear">
+					<div class="wrapper">
+						<div class="textwrap">
+							<?php if ($rs_title) { ?>
+							<h3><?php echo $rs_title ?></h3>
+							<?php } ?>
+							<?php echo $rs_text ?>
+						</div>
+					</div>
+				</section>	
+				<?php } ?>
 
 				<?php if ($more_reviews) { ?>
 					<div id="morequotes" class="popupwrapper morequotes">
