@@ -48,6 +48,16 @@ get_header(); ?>
 								</a>
 							</div>	
 							<?php } ?>
+
+							<?php if ( $letter = get_post_by_slug('letter-to-the-readers') ) { ?>
+							<div class="letter">
+								<a id="letterLink" href="#letterToReaders">
+									Letter to the Readers
+									<span class="arrow"><i class="fas fa-chevron-right"></i></span>
+								</a>
+							</div>	
+							<?php } ?>
+
 						</div>
 
 						<?php if ($sidebar_content) { ?>
@@ -59,67 +69,24 @@ get_header(); ?>
 						<?php } ?>
 					</div>
 
-					<?php if ($photos) { ?>
-					<div class="polaroids">
-						<?php foreach ($photos as $p) { ?>
-							<?php if ($p['image']) { ?>
-							<div class="photo">
-								<img src="<?php echo $p['image']['url'] ?>" alt="$p['image']['title']" />
-								<?php if ($p['caption']) { ?>
-								<small class="caption"><?php echo $p['caption']; ?></small>	
-								<?php } ?>
-							</div>
-							<?php } ?>
-						<?php } ?>
-					</div>
-					<?php } ?>
 				</div>
 			<?php endwhile;  ?>
 
+
 			<?php /* INSTAGRAM FEEDS */ ?>
-			<section class="instagram-section clear">
+			<section class="instagram-section instadiv clear">
 				<div class="wrapper">
 					<div id="insta_title" class="section-title"></div>
 					<div id="instagram_feeds" class="instagramfeeds"></div>
 				</div>
 			</section>
 
-			<?php /* INSTAGRAM FEEDS */ ?>
-			<section class="instagram-section clear">
-				<div class="wrapper">
-					<div id="insta_title" class="section-title"></div>
-					<div id="instagram_feeds" class="instagramfeeds"></div>
-				</div>
-			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-	<?php 
-		$letterImages = get_field('letter_images'); 
-		$letter_quote = get_field('letter_quote'); 
-	?>
-
-	<?php if ($letter_text) { ?>
-	<div id="letterToReaders" class="letterToReaders">
-		<div class="lettertop middiv"><div><a href="#" id="closeLetter" class="close"><span>x</span></a></div></div>
-		<div class="lettercontent middiv">
-			<div class="inside clear">
-				<?php if ($letter_quote) { ?>
-					<blockquote class="quote"><?php echo $letter_quote ?></blockquote>	
-				<?php } ?>
-				<div class="lettertext"><?php echo $letter_text ?></div>
-				<?php if ($letterImages) { ?>
-				<div class="letter-images">
-					<?php foreach ($letterImages as $img) { ?>
-						<div class="img"><img src="<?php echo $img['url'] ?>" alt="<?php echo $img['title'] ?>"></div>
-					<?php } ?>
-				</div>	
-				<?php } ?>
-			</div>
-		</div>
-	</div>
-	<?php } ?>
+	
+	<?php get_template_part('template-parts/letter-to-the-readers'); ?>
+						
 <?php
 
 get_footer();

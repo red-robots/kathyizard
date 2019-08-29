@@ -404,3 +404,9 @@ function get_social_media() {
     }
     return $social;
 }
+
+function get_post_by_slug($post_name) {
+  global $wpdb;
+  $post = $wpdb->get_var($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE post_name = %s", $post_name));
+  return $post ? get_post($post) : NULL;
+}

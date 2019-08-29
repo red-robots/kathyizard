@@ -29,20 +29,16 @@ get_header(); ?>
 				</div>
 				<?php } ?>
 
-				<?php 
-					$letter_title = get_field('letter_title'); 
-					$letter_text = get_field('letter_text'); 
-				?>
-				
+	
 				<div class="entry-content clear <?php echo ($featured_image) ? ' has-image':'no-image';?>">
 					<div class="textwrap wrapper">
 						<div class="bio"><?php the_content(); ?></div>
 
-						<?php if ($letter_text) { ?>
+						<?php if ( $letter = get_post_by_slug('letter-to-the-readers') ) { ?>
 						<div class="letter">
 							<a id="letterLink" href="#letterToReaders">
-								<?php echo $letter_title ?>
-								<span class="arrow"><i class="fas fa-chevron-right"></i>		</span>
+								Letter to the Readers
+								<span class="arrow"><i class="fas fa-chevron-right"></i></span>
 							</a>
 						</div>	
 						<?php } ?>
@@ -76,31 +72,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<?php 
-		$letterImages = get_field('letter_images'); 
-		$letter_quote = get_field('letter_quote'); 
-	?>
-
-	<?php if ($letter_text) { ?>
-	<div id="letterToReaders" class="letterToReaders">
-		<div class="lettertop middiv"><div><a href="#" id="closeLetter" class="close"><span>x</span></a></div></div>
-		<div class="lettercontent middiv">
-			<div class="inside clear">
-				<?php if ($letter_quote) { ?>
-					<blockquote class="quote"><?php echo $letter_quote ?></blockquote>	
-				<?php } ?>
-				<div class="lettertext"><?php echo $letter_text ?></div>
-				<?php if ($letterImages) { ?>
-				<div class="letter-images">
-					<?php foreach ($letterImages as $img) { ?>
-						<div class="img"><img src="<?php echo $img['url'] ?>" alt="<?php echo $img['title'] ?>"></div>
-					<?php } ?>
-				</div>	
-				<?php } ?>
-			</div>
-		</div>
-	</div>
-	<?php } ?>
+	<?php get_template_part('template-parts/letter-to-the-readers'); ?>
 <?php
 
 get_footer();

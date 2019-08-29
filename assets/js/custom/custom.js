@@ -17,14 +17,18 @@ jQuery(document).ready(function ($) {
 	/* Open a Letter to Readers Pop-up */
 	$(document).on('click','#closeLetter', function(e){
 		e.preventDefault();
-		$(".letterToReaders").removeClass('open');
+		$(".letterToReaders").fadeOut();
 	});
 
 	$(document).on('click','#letterLink', function(e){
 		e.preventDefault();
-		$(".letterToReaders").addClass('open');
+		$(".letterToReaders").fadeIn();
 	});
 
+	if( $('#letterToReaders').length ) {
+		var quote_text = $('#letterToReaders').find('.wp-block-quote');
+		$(quote_text).appendTo($('#quotetext'));
+	}
 
 	/* Open a Letter to Readers Pop-up */
 	$(document).on('click','.opendiv', function(e){

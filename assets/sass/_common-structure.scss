@@ -953,7 +953,7 @@ body.admin-bar {
     	z-index: 10;
     }
     .bio {
-    	@include tab {
+    	@include mid {
     		padding-right: 355px;
     	}
     	@include desk {
@@ -1009,43 +1009,6 @@ body.admin-bar {
 			padding-bottom: 2%;
 		}
 	}
-	.letter {
-		margin-top: 40px;
-		a {
-			display: inline-block;
-			text-decoration: none;
-			font: 700 12px/70px $font_secondary;
-			color: $dark_blue;
-			text-transform: uppercase;
-			position: relative;
-			padding: 0 50px 0 100px;
-			.arrow {
-				position: absolute;
-				right: 0;
-				top: 0;
-				font-size: 15px;
-				color: $light_blue;
-				transition: all ease .3s;
-			}
-			&:before {
-				content: '';
-				height: 70px;
-				width: 90px;
-				background-image: url(images/feather.png);
-				background-repeat: no-repeat;
-				background-size: contain;
-				position: absolute;
-				left: 0;
-				margin-right: 0;
-			}
-			&:hover {
-				color: $light_blue;
-				.arrow {
-					margin-right: -10px;
-				}
-			}
-		}
-	}
 }
 
 .polaroids {
@@ -1057,10 +1020,10 @@ body.admin-bar {
 	z-index: 10;
 	background: #f3f3f3;
 	padding: 30px 0;
-	@include tab {
+	@include mid {
 		max-width: 350px;
 		position: absolute;
-		top: 5%;
+		top: 0;
 		right: 0;
 		float: none;
 		padding: 0 0;
@@ -1068,7 +1031,7 @@ body.admin-bar {
 	.photo {
 		width: 33.33%;
 		float: left;
-		@include tab {
+		@include mid {
 			width: 100%;
 			margin-bottom: 35px;
 		}
@@ -1086,7 +1049,7 @@ body.admin-bar {
 		line-height: 1.2;
 		width: 100%;
 		float: left;
-		@include tab {
+		@include mid {
 			text-align: right;
 			padding: 0 15px 0 0;
 		}
@@ -1094,9 +1057,12 @@ body.admin-bar {
 }
 
 .instagram-section {
-	padding-top: 3%;
+	padding-top: 6%;
 	padding-bottom: 6%;
 	background: #f3f3f3;
+	&.instadiv {
+		padding-top: 0;
+	}
 	.section-title {
 		font-family: $font_secondary;
 		font-size: 20px;
@@ -1247,145 +1213,6 @@ body.admin-bar {
 		width: 100%;
 		height: auto;
 		float: left;
-	}
-}
-
-.letterToReaders {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -999;
-	background: rgba(255,255,255,.75);
-	padding: 20px;
-	opacity: 0;
-	visibility: hidden;
-	transition: all ease-in-out .3s;
-	.middiv {
-		transition: all ease-out .3s;
-		transform: translateY(-200%);
-	}
-	&.open {
-		z-index: 10008;
-		opacity: 1;
-		visibility: visible;
-		.middiv {
-			transform: translateY(0);
-			transition-delay: .3s;
-		}
-	}
-	.lettertop div, 
-	.lettercontent {
-		max-width: 900px;
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	.lettertop {
-		width: 100%;
-		position: fixed;
-		top: 20px;
-		left: 0;
-		z-index: 20;
-		padding: 0 20px;
-		div {
-			text-align: right;
-			padding: 10px;
-
-		}
-		a.close {
-			display: inline-block;
-			width: 30px;
-			height: 30px;
-			line-height: 28px;
-			border: 1px solid $dark_blue;
-			text-align: center;
-			text-decoration: none;
-			border-radius: 100%;
-			position: relative;
-			background: $dark_blue;
-			color: #FFF;
-			span {
-				font-family: $font_secondary;
-				font-size: 20px;
-				font-weight: bold;
-				position: relative;
-			}
-			&:hover {
-				background: #FFF;
-				color: $dark_blue;
-			}
-		}
-	}
-
-	.lettercontent {
-		height: 100%;
-		overflow: scroll;
-		background-color: #fdfcef;
-		color: $dark_blue;
-		box-shadow: 0px 2px 25px rgba(0,0,0,.5);
-		border-radius: 6px;
-		padding-bottom: 30px;
-		position: relative;
-	}
-	.inside {
-		font-family: $font_cursive;
-		font-size: 16px;
-		line-height: 1.7;
-		padding: 20px 20px;
-		position: relative;
-		z-index: 5;
-	}
-	blockquote {
-		font-size: 18px;
-		line-height: 1.6;
-		&.quote {
-			margin-bottom: 35px;
-		}
-		small {
-			font-size: 13px;
-		}
-	}
-	.lettertext {
-		width: 100%;
-		margin-bottom: 20px;
-		font-size: 14px;
-		line-height: 1.8;
-		@include tab {
-			width: 66%;
-			float: left;
-			margin-bottom: 0;
-		}
-		p {
-			margin-top: 0;
-			margin-bottom: 15px;
-		}
-	}
-	.letter-images {
-		width: 100%;
-		float: left;
-		margin: 20px 0 30px;
-		@include tab {
-			width: 30%;
-			float: right;
-			margin: 0 0;
-		}
-		.img {
-			width: 33.3%;
-			float: left;
-			padding: 5px;
-			@include tab {
-				width: 100%;
-				margin-bottom: 20px;
-				padding: 0;
-			}
-		}
-		img {
-			width: 100%;
-			height: auto;
-			float: left;
-		}
 	}
 }
 
@@ -2059,6 +1886,184 @@ h3.sectionTitle {
 			a {
 				color: $teal;
 			}
+		}
+	}
+}
+
+.letter {
+	margin-top: 40px;
+	a {
+		display: inline-block;
+		text-decoration: none;
+		font: 700 12px/70px $font_secondary;
+		color: $dark_blue;
+		text-transform: uppercase;
+		position: relative;
+		padding: 0 50px 0 100px;
+		.arrow {
+			position: absolute;
+			right: 0;
+			top: 0;
+			font-size: 15px;
+			color: $light_blue;
+			transition: all ease .3s;
+		}
+		&:before {
+			content: '';
+			height: 70px;
+			width: 90px;
+			background-image: url(images/feather.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			left: 0;
+			margin-right: 0;
+		}
+		&:hover {
+			color: $light_blue;
+			.arrow {
+				margin-right: -10px;
+			}
+		}
+	}
+}
+
+.letterToReaders {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: rgba(255,255,255,.75);
+	padding: 20px;
+	// opacity: 0;
+	// visibility: hidden;
+	//transition: all ease-in-out .3s;
+	.middiv {
+		// transition: all ease-out .3s;
+		// transform: translateY(-200%);
+	}
+	&.open {
+		z-index: 10008;
+		opacity: 1;
+		visibility: visible;
+		.middiv {
+			transform: translateY(0);
+			transition-delay: .3s;
+		}
+	}
+	.lettertop div, 
+	.lettercontent {
+		max-width: 900px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.lettertop {
+		width: 100%;
+		position: fixed;
+		top: 20px;
+		left: 0;
+		z-index: 20;
+		padding: 0 20px;
+		div {
+			text-align: right;
+			padding: 10px;
+
+		}
+		a.close {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			line-height: 28px;
+			border: 1px solid $dark_blue;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 100%;
+			position: relative;
+			background: $dark_blue;
+			color: #FFF;
+			span {
+				font-family: $font_secondary;
+				font-size: 20px;
+				font-weight: bold;
+				position: relative;
+			}
+			&:hover {
+				background: #FFF;
+				color: $dark_blue;
+			}
+		}
+	}
+
+	.lettercontent {
+		height: 100%;
+		overflow: scroll;
+		background-color: #fdfcef;
+		color: $dark_blue;
+		box-shadow: 0px 2px 25px rgba(0,0,0,.5);
+		border-radius: 6px;
+		padding-bottom: 30px;
+		position: relative;
+	}
+	.inside {
+		font-family: $font_cursive;
+		font-size: 16px;
+		line-height: 1.7;
+		padding: 20px 20px;
+		position: relative;
+		z-index: 5;
+	}
+	blockquote {
+		font-size: 18px;
+		line-height: 1.6;
+		&.quote {
+			margin-bottom: 35px;
+		}
+		small {
+			font-size: 13px;
+		}
+	}
+	.lettertext {
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 1.8;
+		@include tab {
+			width: 66%;
+			float: left;
+			margin-bottom: 0;
+		}
+		p {
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+	}
+	.letter-images {
+		width: 100%;
+		float: left;
+		margin: 20px 0 30px;
+		@include tab {
+			width: 30%;
+			float: right;
+			margin: 0 0;
+		}
+		.img {
+			width: 33.3%;
+			float: left;
+			padding: 5px;
+			@include tab {
+				width: 100%;
+				margin-bottom: 20px;
+				padding: 0;
+			}
+		}
+		img {
+			width: 100%;
+			height: auto;
+			float: left;
 		}
 	}
 }

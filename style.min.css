@@ -1905,7 +1905,7 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 .page-fullwidth-image .entry-content:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-image:url("images/content.png");background-repeat:no-repeat;background-color:#f3f3f3}
 .page-fullwidth-image .entry-content.has-image:before{top:-50px}
 .page-fullwidth-image .entry-content .wrapper{position:relative;z-index:10}
-@media(min-width:700px){.page-fullwidth-image .entry-content .bio{padding-right:355px}
+@media(min-width:980px){.page-fullwidth-image .entry-content .bio{padding-right:355px}
 }@media(min-width:1200px){.page-fullwidth-image .entry-content .bio{padding-right:30%}
 }.page-fullwidth-image .entry-content a{color:#487497}
 .page-fullwidth-image .entry-content h6{font-family:"Josefin Sans",sans-serif;font-weight:700;font-size:12px;line-height:1.5;color:#71b4d5;letter-spacing:2px;text-transform:uppercase;margin-bottom:5px;position:relative}
@@ -1916,20 +1916,15 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 .page-fullwidth-image .entry-content p.last{margin-bottom:60px}
 .entry-title{font-family:"Josefin Sans",sans-serif;font-size:28px;font-weight:600;margin:20px 0 20px;color:#487497}
 @media(min-width:700px){.page-about .entry-content.has-image{padding-bottom:2%}
-}.page-about .letter{margin-top:40px}
-.page-about .letter a{display:inline-block;text-decoration:none;font:700 12px/70px "Hind",sans-serif;color:#487497;text-transform:uppercase;position:relative;padding:0 50px 0 100px}
-.page-about .letter a .arrow{position:absolute;right:0;top:0;font-size:15px;color:#71b4d5;-webkit-transition:all ease .3s;transition:all ease .3s}
-.page-about .letter a:before{content:'';height:70px;width:90px;background-image:url(images/feather.png);background-repeat:no-repeat;background-size:contain;position:absolute;left:0;margin-right:0}
-.page-about .letter a:hover{color:#71b4d5}
-.page-about .letter a:hover .arrow{margin-right:-10px}
-.polaroids{max-width:100%;width:100%;margin:0 auto;float:left;position:relative;z-index:10;background:#f3f3f3;padding:30px 0}
-@media(min-width:700px){.polaroids{max-width:350px;position:absolute;top:5%;right:0;float:none;padding:0}
+}.polaroids{max-width:100%;width:100%;margin:0 auto;float:left;position:relative;z-index:10;background:#f3f3f3;padding:30px 0}
+@media(min-width:980px){.polaroids{max-width:350px;position:absolute;top:0;right:0;float:none;padding:0}
 }.polaroids .photo{width:33.33%;float:left}
-@media(min-width:700px){.polaroids .photo{width:100%;margin-bottom:35px}
+@media(min-width:980px){.polaroids .photo{width:100%;margin-bottom:35px}
 }.polaroids .photo img{width:100%;height:auto;float:left}
 .polaroids .caption{display:block;padding:0 10px;text-align:center;font-size:11px;line-height:1.2;width:100%;float:left}
-@media(min-width:700px){.polaroids .caption{text-align:right;padding:0 15px 0 0}
-}.instagram-section{padding-top:3%;padding-bottom:6%;background:#f3f3f3}
+@media(min-width:980px){.polaroids .caption{text-align:right;padding:0 15px 0 0}
+}.instagram-section{padding-top:6%;padding-bottom:6%;background:#f3f3f3}
+.instagram-section.instadiv{padding-top:0}
 .instagram-section .section-title{font-family:"Hind",sans-serif;font-size:20px;font-weight:500;line-height:1.2;text-transform:uppercase;letter-spacing:1px;color:#487497;text-align:center}
 .instagram-section .section-title div{position:relative}
 .instagram-section .section-title div:before{content:"";display:block;width:100%;height:2px;background:#487497;position:absolute;top:48%;left:0}
@@ -1952,29 +1947,6 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 .feat-image .caption{position:absolute;bottom:15px;left:0;text-align:center;font-family:"Josefin Sans",sans-serif;font-size:25px;font-weight:400;color:#487497;text-align:center;width:100%;z-index:5;padding:0 15px}
 .feat-image .caption .mid{background:rgba(255,255,255,0.5);padding:25px 20px 5px 15px}
 .feat-image img{width:100%;height:auto;float:left}
-.letterToReaders{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-999;background:rgba(255,255,255,0.75);padding:20px;opacity:0;visibility:hidden;-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
-.letterToReaders .middiv{-webkit-transition:all ease-out .3s;transition:all ease-out .3s;-webkit-transform:translateY(-200%);-ms-transform:translateY(-200%);transform:translateY(-200%)}
-.letterToReaders.open{z-index:10008;opacity:1;visibility:visible}
-.letterToReaders.open .middiv{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);-webkit-transition-delay:.3s;transition-delay:.3s}
-.letterToReaders .lettertop div,.letterToReaders .lettercontent{max-width:900px;width:100%;margin:0 auto}
-.letterToReaders .lettertop{width:100%;position:fixed;top:20px;left:0;z-index:20;padding:0 20px}
-.letterToReaders .lettertop div{text-align:right;padding:10px}
-.letterToReaders .lettertop a.close{display:inline-block;width:30px;height:30px;line-height:28px;border:1px solid #487497;text-align:center;text-decoration:none;border-radius:100%;position:relative;background:#487497;color:#FFF}
-.letterToReaders .lettertop a.close span{font-family:"Hind",sans-serif;font-size:20px;font-weight:bold;position:relative}
-.letterToReaders .lettertop a.close:hover{background:#FFF;color:#487497}
-.letterToReaders .lettercontent{height:100%;overflow:scroll;background-color:#fdfcef;color:#487497;box-shadow:0 2px 25px rgba(0,0,0,0.5);border-radius:6px;padding-bottom:30px;position:relative}
-.letterToReaders .inside{font-family:"Noto Serif",serif;font-size:16px;line-height:1.7;padding:20px 20px;position:relative;z-index:5}
-.letterToReaders blockquote{font-size:18px;line-height:1.6}
-.letterToReaders blockquote.quote{margin-bottom:35px}
-.letterToReaders blockquote small{font-size:13px}
-.letterToReaders .lettertext{width:100%;margin-bottom:20px;font-size:14px;line-height:1.8}
-@media(min-width:700px){.letterToReaders .lettertext{width:66%;float:left;margin-bottom:0}
-}.letterToReaders .lettertext p{margin-top:0;margin-bottom:15px}
-.letterToReaders .letter-images{width:100%;float:left;margin:20px 0 30px}
-@media(min-width:700px){.letterToReaders .letter-images{width:30%;float:right;margin:0}
-}.letterToReaders .letter-images .img{width:33.3%;float:left;padding:5px}
-@media(min-width:700px){.letterToReaders .letter-images .img{width:100%;margin-bottom:20px;padding:0}
-}.letterToReaders .letter-images img{width:100%;height:auto;float:left}
 .page-speaking.page-fullwidth-image .entry-content{width:100%;float:left;padding-top:60px;background-color:transparent}
 .page-speaking.page-fullwidth-image .entry-content:before{display:none}
 .page-speaking.page-fullwidth-image .has-sidebar .textwrap{width:100%;float:left}
@@ -2088,6 +2060,34 @@ h3.sectionTitle{font-weight:400;margin-bottom:10px}
 }.page-contact .sidebardiv .wrap{padding:20px;color:#c4f7fd;font-size:20px;font-weight:400;line-height:1.5;text-align:center}
 .page-contact .sidebardiv .wrap h3{color:#c4f7fd;font-size:22px;font-weight:400}
 .page-contact .sidebardiv .wrap a{color:#c4f7fd}
+.letter{margin-top:40px}
+.letter a{display:inline-block;text-decoration:none;font:700 12px/70px "Hind",sans-serif;color:#487497;text-transform:uppercase;position:relative;padding:0 50px 0 100px}
+.letter a .arrow{position:absolute;right:0;top:0;font-size:15px;color:#71b4d5;-webkit-transition:all ease .3s;transition:all ease .3s}
+.letter a:before{content:'';height:70px;width:90px;background-image:url(images/feather.png);background-repeat:no-repeat;background-size:contain;position:absolute;left:0;margin-right:0}
+.letter a:hover{color:#71b4d5}
+.letter a:hover .arrow{margin-right:-10px}
+.letterToReaders{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000;background:rgba(255,255,255,0.75);padding:20px}
+.letterToReaders.open{z-index:10008;opacity:1;visibility:visible}
+.letterToReaders.open .middiv{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);-webkit-transition-delay:.3s;transition-delay:.3s}
+.letterToReaders .lettertop div,.letterToReaders .lettercontent{max-width:900px;width:100%;margin:0 auto}
+.letterToReaders .lettertop{width:100%;position:fixed;top:20px;left:0;z-index:20;padding:0 20px}
+.letterToReaders .lettertop div{text-align:right;padding:10px}
+.letterToReaders .lettertop a.close{display:inline-block;width:30px;height:30px;line-height:28px;border:1px solid #487497;text-align:center;text-decoration:none;border-radius:100%;position:relative;background:#487497;color:#FFF}
+.letterToReaders .lettertop a.close span{font-family:"Hind",sans-serif;font-size:20px;font-weight:bold;position:relative}
+.letterToReaders .lettertop a.close:hover{background:#FFF;color:#487497}
+.letterToReaders .lettercontent{height:100%;overflow:scroll;background-color:#fdfcef;color:#487497;box-shadow:0 2px 25px rgba(0,0,0,0.5);border-radius:6px;padding-bottom:30px;position:relative}
+.letterToReaders .inside{font-family:"Noto Serif",serif;font-size:16px;line-height:1.7;padding:20px 20px;position:relative;z-index:5}
+.letterToReaders blockquote{font-size:18px;line-height:1.6}
+.letterToReaders blockquote.quote{margin-bottom:35px}
+.letterToReaders blockquote small{font-size:13px}
+.letterToReaders .lettertext{width:100%;margin-bottom:20px;font-size:14px;line-height:1.8}
+@media(min-width:700px){.letterToReaders .lettertext{width:66%;float:left;margin-bottom:0}
+}.letterToReaders .lettertext p{margin-top:0;margin-bottom:15px}
+.letterToReaders .letter-images{width:100%;float:left;margin:20px 0 30px}
+@media(min-width:700px){.letterToReaders .letter-images{width:30%;float:right;margin:0}
+}.letterToReaders .letter-images .img{width:33.3%;float:left;padding:5px}
+@media(min-width:700px){.letterToReaders .letter-images .img{width:100%;margin-bottom:20px;padding:0}
+}.letterToReaders .letter-images img{width:100%;height:auto;float:left}
 @media screen and (max-width:767px){.site-header .main-navigation .wrapper{padding-left:10px;padding-right:10px}
 .site-header .main-navigation .mainmenu{border-top:0}
 .site-header .nav{display:block;width:250px;background:#487497;position:absolute;top:42px;-webkit-transition:all ease .3s;transition:all ease .3s;right:-100%;height:450px;padding:15px 0 10px;z-index:-99}
