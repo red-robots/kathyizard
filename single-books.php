@@ -12,6 +12,8 @@ get_header(); ?>
 				<h1 style="display: none;"><?php the_title(); ?></h1>
 
 				<?php  
+				$square = get_bloginfo('template_url') . '/images/px.png';
+				$px2 = get_bloginfo('template_url') . '/images/px2.png';
 				$imgurl = get_field('imgurl');
 				$imgcaption = get_field('imgcaption');
 				$framebg = get_field('frame_background');
@@ -46,6 +48,53 @@ get_header(); ?>
 					</div>
 				<?php } ?>
 
+				<?php  
+					$topimgurl = get_field('topimgurl');
+					$topimgLink = get_field('topimgLink');
+					$topimgcaption = get_field('topimgcaption');
+					$topimgBtnName = get_field('topimgBtn');
+					$topimgBtnLink = get_field('topimgBtnLink');
+					$imglink_before = '';
+					$imglink_after = '';
+					if($topimgLink) {
+						$imglink_before = '<a href="'.$topimgLink.'" target="_blank">';
+						$imglink_after = '<a>';
+					}
+				?>
+
+				<?php if ($topimgurl && $topimgcaption) { ?>
+				<div class="hero wrapper">
+					<div class="two-column-box clear">
+						<div class="flexrow">
+							<div class="col left">
+								<?php if ($topimgurl) { ?>
+								<div class="media">
+									<?php echo $imglink_before; ?>
+									<img src="<?php echo $topimgurl['url'] ?>" alt="" aria-hidden="true">
+									<span class="thumb" style="display:none;background-image:url(<?php echo $topimgurl['url']; ?>)"></span>
+									<?php echo $imglink_after; ?>
+								</div>
+								<?php } ?>
+							</div>
+							<div class="col right">
+								<div class="text text2">
+									<?php if ($topimgcaption) { ?>
+										<?php echo $topimgcaption ?>	
+									<?php } ?>
+									<?php if ($topimgBtnName && $topimgBtnLink) { ?>
+									<div class="buttondiv text-center">
+										<a href="<?php echo $topimgBtnLink ?>" target="_blank" class="btn1"><?php echo $topimgBtnName ?></a>
+									</div>	
+									<?php } ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
+
+
+
 				<?php 
 					$reviews = get_field('reviews'); 
 					$total_reviews = ($reviews) ? count($reviews) : 0;
@@ -53,12 +102,42 @@ get_header(); ?>
 					$more_reviews = array();
 				?>
 
-				<div class="pagecontent clear">
-					<div class="inner wrapper">
-						<h6><?php the_title(); ?></h6>
-						<div class="textwrap">
-							<?php the_content(); ?>
+				<div class="pagecontent clear <?php echo ($topimgurl) ? 'imagetextcol':'framed';?>">
+					<div class="inner wrapper clear">
+
+						<div class="outerwrap <?php echo (has_post_thumbnail()) ? 'texthalf':'textfull';?>">
+						
+							<div class="textwrap">
+								<?php the_content(); ?>
+							</div>
+
+					
+							<?php $news = get_field('news'); ?>
+							<?php if ($news) { ?>
+							<section class="news-reviews">
+								<?php foreach ($news as $v) {
+									$n_image = $v['image'];
+									$n_text = $v['text']; 
+									?>
+									<div class="news-info <?php echo ($n_image && $n_text) ? 'twocol':'full';?>">
+										<?php if ($n_image) { ?>
+										<div class="imgcol ncol">
+											<img src="<?php echo $n_image['url'] ?>" alt="<?php echo $n_image['title'] ?>" />
+										</div>
+										<?php } ?>
+										<?php if ($n_text) { ?>
+										<div class="txtcol ncol"><?php echo $n_text ?></div>
+										<?php } ?>
+									</div>
+								<?php  } ?>
+							</section>
+							<?php } ?>
 						</div>
+
+						<?php if ( has_post_thumbnail() ) { ?>
+						<div class="postimg"><?php the_post_thumbnail('large'); ?></div>
+						<?php } ?>
+
 
 						<?php if ($reviews) { ?>
 						<div class="reviews-wrapper">
@@ -123,7 +202,6 @@ get_header(); ?>
 						</div>
 					</div>
 				<?php } ?>
-
 
 			<?php endwhile; ?>
 

@@ -1745,6 +1745,7 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-
 .sr{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
 .sr:focus{background-color:#333;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto !important;color:#FFF;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #content[tabindex="-1"]:focus{outline:0}
+.text-center{text-align:center}
 .nomb{margin-bottom:0 !important}
 .nomt{margin-top:0 !important}
 .clear:before,.clear:after{content:" ";display:table}
@@ -1852,10 +1853,11 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 .featured-book .col.right{background:#487497;color:#FFF}
 .featured-book .col.right .inside{padding:30px;width:100%;height:100%;position:relative;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .featured-book .col.right .t1{font-family:"Hind",sans-serif;color:#71b4d5;font-size:12px;text-transform:uppercase;margin:0}
-.featured-book .col.right .t2{font-family:"Josefin Sans",sans-serif;color:#c4f7fd !important;text-align:left;font-size:24px !important;font-weight:normal;margin:2px 0 10px}
+.featured-book .col.right h2,.featured-book .col.right .t2{font-family:"Josefin Sans",sans-serif;color:#c4f7fd !important;text-align:left;font-size:24px !important;font-weight:normal;margin:2px 0 10px}
 .featured-book .col.right .desc{font-size:18px;line-height:1.4}
 .featured-book .col.right .desc p{margin-top:0}
 .featured-book .col.right .desc p:last-child{margin-bottom:0}
+.featured-book .col.right p{margin-top:0}
 .featured-book .col.right .buttondiv{margin-top:30px;text-align:center}
 @media(min-width:700px){.featured-book .col.right .buttondiv{margin-top:40px}
 }.btn1{display:inline-block;text-decoration:none;font-family:"Hind",sans-serif;font-size:18px;font-weight:600;line-height:1.3;text-transform:uppercase;padding:15px 30px 10px;border-radius:50px;border:1px solid #FFF;color:#FFF}
@@ -1977,6 +1979,7 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 }.two-column-box .col.right{background:#487497;color:#FFF;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:center;-ms-flex-wrap:center;flex-wrap:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .two-column-box .col.right .text{padding:6%;font-size:18px;line-height:1.4}
 .two-column-box .col.right .text.text2{padding:10% 6%}
+.two-column-box .col.right h2{font-family:"Josefin Sans",sans-serif;color:#c4f7fd !important;text-align:left;font-size:24px !important;font-weight:normal;margin:2px 0 10px}
 .two-column-box .col.right h3{font-family:"Josefin Sans",sans-serif;color:#c4f7fd !important;text-align:left;font-size:25px !important;font-weight:normal;margin:2px 0 10px}
 .two-column-box .col.right h6{font-family:"Hind",sans-serif;font-weight:700;font-size:12px;line-height:1.3;color:#71b4d5;letter-spacing:2px;text-transform:uppercase;margin:0}
 .two-column-box .col.full{width:100%}
@@ -1996,6 +1999,8 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 .two-column-box .featimage{position:relative;color:#666}
 .two-column-box .featimage .frame{padding:10px;background:#fbf6e4;box-shadow:0 0 8px 0 rgba(0,0,0,0.25)}
 .two-column-box .featimage .featcaption{font-size:14px;line-height:1.3;padding:4px 0 1px;text-align:center}
+.two-column-box p{margin-top:0}
+.two-column-box .buttondiv{margin-top:30px}
 .fancybox-content{max-width:100% !important;max-height:80%}
 @media(min-width:1200px){.fancybox-content{max-width:60% !important;max-height:80% !important}
 }.fancybox-slide--iframe .fancybox-content{border-radius:6px;background:#FFF;border:4px solid #FFF}
@@ -2104,11 +2109,25 @@ h3.sectionTitle{font-weight:400;margin-bottom:10px}
 .featured-stuff .buttondiv a.btn1{padding:15px 40px 12px}
 .hero{position:relative;z-index:10}
 .pagecontent{position:relative;background-image:url(images/content.png);background-position:top left;background-repeat:no-repeat;background-color:#f3f3f3;top:-50px;margin-bottom:-50px;padding-top:65px;padding-bottom:50px}
+.pagecontent.imagetextcol{width:100%;float:left;top:-100px;margin-bottom:-100px}
+.pagecontent .textwrap{width:100%;float:left}
 .pagecontent .textwrap h3{font-family:"Josefin Sans",sans-serif;font-size:28px;font-weight:400;line-height:1.3;margin:35px 0 5px;color:#487497}
 .pagecontent .textwrap p{margin-top:0}
 .reviews-wrapper .review{margin-top:50px;margin-bottom:50px;padding-top:20px;position:relative}
 .reviews-wrapper .review:before{content:'\201C';display:inline-block;font-family:"Hind",sans-serif;font-size:90px;line-height:1;color:#71b4d5;position:absolute;top:-8px;left:0}
 .reviews-wrapper .from{font-family:"Hind",sans-serif;font-weight:700;font-size:12px;line-height:1.3;color:#71b4d5;letter-spacing:2px;text-transform:uppercase;margin:0}
+.texthalf{width:100%;float:left;margin-bottom:30px}
+@media(min-width:700px){.texthalf{width:72%;margin-bottom:0}
+}@media(min-width:700px){.postimg{width:25%;float:right;margin-top:40px}
+}.postimg img{width:100%;height:auto}
+.news-reviews{width:100%;float:left}
+.news-reviews .news-info,.news-reviews .ncol{width:100%;float:left}
+.news-reviews .news-info{margin:20px 0}
+.news-reviews .imgcol img{width:100%;height:auto}
+.news-reviews .twocol .imgcol{margin-top:7px}
+@media(min-width:700px){.news-reviews .twocol .imgcol{width:45%;float:left}
+}@media(min-width:700px){.news-reviews .twocol .txtcol{width:52%;float:right}
+}.news-reviews .txtcol p{margin-top:0}
 .page-bottom-text{margin-top:20px}
 @media screen and (max-width:767px){.site-header .main-navigation .wrapper{padding-left:10px;padding-right:10px}
 .site-header .main-navigation .mainmenu{border-top:0}

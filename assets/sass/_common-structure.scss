@@ -48,6 +48,7 @@ div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
+.text-center {text-align:center;}
 .nomb{margin-bottom:0!important;}
 .nomt{margin-top:0!important;}
 .clear:before, .clear:after { content: " "; display: table; }.clear { *zoom: 1; } .clear {clear: both;}
@@ -652,6 +653,7 @@ body.admin-bar {
     		text-transform: uppercase;
     		margin: 0 0;
 		}
+		h2,
 		.t2 {
 			font-family: $font_heading;
 			color: $teal !important;
@@ -669,6 +671,9 @@ body.admin-bar {
 			p:last-child {
 				margin-bottom: 0;
 			}
+		}
+		p {
+			margin-top: 0;
 		}
 		.buttondiv {
 			margin-top: 30px;
@@ -1380,6 +1385,14 @@ body.admin-bar {
 				padding: 10% 6%;
 			}
 		}
+		h2 {
+			font-family: $font_heading;
+			color: $teal !important;
+			text-align: left;
+			font-size: 24px !important;
+			font-weight: normal;
+			margin: 2px 0 10px;
+		}
 		h3 {
 			font-family: $font_heading;
 			color: $teal !important;
@@ -1501,6 +1514,12 @@ body.admin-bar {
 			padding: 4px 0 1px;
 			text-align: center;
 		}
+	}
+	p {
+		margin-top: 0;
+	}
+	.buttondiv {
+		margin-top: 30px;
 	}
 }
 
@@ -2170,7 +2189,15 @@ h3.sectionTitle {
 	margin-bottom: -50px;
 	padding-top:  65px;
 	padding-bottom: 50px;
+	&.imagetextcol {
+		width: 100%;
+		float: left;
+		top: -100px;
+		margin-bottom: -100px;
+	}
 	.textwrap {
+		width: 100%;
+		float: left;
 		h3 {
 			font-family: $font_heading;
 			font-size: 28px;
@@ -2211,6 +2238,61 @@ h3.sectionTitle {
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		margin: 0 0;
+	}
+}
+
+.texthalf {
+	width: 100%;
+	float: left;
+	margin-bottom: 30px;
+	@include tab {
+		width: 72%;
+		margin-bottom: 0;
+	}
+}
+.postimg {
+	@include tab {
+		width: 25%;
+		float: right;
+		margin-top: 40px;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+.news-reviews {
+	width: 100%;
+	float: left;
+	.news-info,
+	.ncol {
+		width: 100%;
+		float: left;
+	}
+	.news-info {
+		margin: 20px 0;
+	}
+	.imgcol img {
+		width: 100%;
+		height: auto;
+	}
+	.twocol {
+		.imgcol {
+			margin-top: 7px;
+			@include tab {
+				width: 45%;
+				float: left;
+			}
+		}
+		.txtcol {
+			@include tab {
+				width: 52%;
+				float: right;
+			}
+		}
+	}
+	.txtcol p {
+		margin-top: 0;
 	}
 }
 
