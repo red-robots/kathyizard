@@ -281,6 +281,8 @@ body.admin-bar {
 
 .main-navigation {
 	width: 100%;
+	float: left;
+	background: #FFF;
 	text-align: center;
 	.mainmenu {
 		width: 100%;
@@ -2365,6 +2367,10 @@ h3.sectionTitle {
 	text-align: left;
 	padding-top: 2%;
 }
+body.admin-bar .site-content {
+	padding-top: 30px;
+}
+
 /* Mobile */
 @media screen and (max-width:767px) {
 	.site-header {
