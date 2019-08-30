@@ -221,7 +221,7 @@ h3 {
 		@include tab {
 			display: block;
 			width: 100%;
-			position: fixed;
+			position: relative;
 			top: 0;
 			background: #FFF;
 		}
@@ -2306,10 +2306,9 @@ h3.sectionTitle {
 	background: $grey;
 }
 .error-404 {
-	min-height: 30em;
 	text-align: center;
 	.page-header {
-		margin-top: 10%;
+		margin-top: 5%;
 	}
 	h1 {
 		font-family: $font_heading;
@@ -2319,6 +2318,49 @@ h3.sectionTitle {
 		color: $dark_blue;
 		margin: 0 0;
 	}
+}
+.pagedefault {
+	min-height: 35em;
+}
+.sitemap-wrapper {
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 50px;
+	.sitemaplist {
+		display: inline-block;
+		text-align: left;
+	}
+	a {
+		text-decoration: none;
+	}
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		li {
+			position: relative;
+			padding-left: 13px;
+			&:before {
+				content:"";
+				display: block;
+				width: 6px;
+				height: 6px;
+				background: $light_blue;
+				border-radius: 100%;
+				position: absolute;
+				top: 11px;
+				left: 0;
+			}
+			ul {
+				margin-left: 20px;
+			}
+		}
+	}
+
+}
+.sitemap .sitemap-wrapper {
+	text-align: left;
+	padding-top: 2%;
 }
 /* Mobile */
 @media screen and (max-width:767px) {

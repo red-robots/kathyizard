@@ -7,12 +7,16 @@
 
 jQuery(document).ready(function ($) {
 
-	$(document).on('scroll', function(){
-		$('.site-header').addClass('fixed');
-		if($(window).scrollTop() == 0){
-			$('.site-header').removeClass('fixed');
-		}
-	});
+	var is_page404 = ( $(".error-404").length ) ? true : false;
+
+	if(is_page404==false) {
+		$(document).on('scroll', function(){
+			$('.site-header').addClass('fixed');
+			if($(window).scrollTop() == 0){
+				$('.site-header').removeClass('fixed');
+			}
+		});
+	}
 
 	/* Open a Letter to Readers Pop-up */
 	$(document).on('click','#closeLetter', function(e){

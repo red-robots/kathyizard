@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area wrapper">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main pagedefault" role="main">
 
 			<section class="error-404 not-found">
 				<header class="page-header">
@@ -19,6 +19,8 @@ get_header(); ?>
 
 				<div class="page-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location.', 'acstarter' ); ?></p>
+
+					<?php get_template_part('template-parts/content','sitemap'); ?>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
