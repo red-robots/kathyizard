@@ -19,10 +19,12 @@ $font_cursive: 'Noto Serif', serif;
 $tabwidth: 700px;
 $midwidth: 980px;
 $deskwidth: 1200px;
+$xxl: 1400px;
 
 @mixin tab { @media (min-width: $tabwidth) { @content; } }
 @mixin mid { @media (min-width: $midwidth) { @content; } }
 @mixin desk {  @media (min-width: $deskwidth) { @content; } }
+@mixin xxl {  @media (min-width: $xxl) { @content; } }
 
 
 // Rem output with px fallback

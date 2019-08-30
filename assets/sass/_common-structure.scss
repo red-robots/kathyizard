@@ -1571,7 +1571,7 @@ body.admin-bar {
 		@include mid {
 			width: 33.3%;
 		}
-		@include desk {
+		@include xxl {
 			width: 25%;
 		}
 		img {
@@ -1610,7 +1610,7 @@ body.admin-bar {
 		.text {
 			margin-top: 10px;
 			font-size: 15px;
-			line-height: 1.4;
+			line-height: 1.2;
 		}
 		h6 {
 			font-family: $font_secondary;
@@ -2155,7 +2155,7 @@ h3.sectionTitle {
 		}
 	}
 	.imgcol {
-		width: 35%;
+		width: 34.8%;
 		float: right;
 		.pad {
 			padding: 10%;
