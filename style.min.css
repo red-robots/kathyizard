@@ -2132,8 +2132,9 @@ h3.sectionTitle{font-weight:400;margin-bottom:10px}
 .error-404{text-align:center}
 .error-404 .page-header{margin-top:5%}
 .error-404 h1{font-family:"Josefin Sans",sans-serif;font-size:35px;font-weight:500;line-height:1.2;color:#487497;margin:0}
+.error-404 p{margin-top:0}
 .pagedefault{min-height:35em}
-.sitemap-wrapper{text-align:center;padding-top:5%;padding-bottom:50px}
+.sitemap-wrapper{text-align:center;padding-top:3%;padding-bottom:50px}
 .sitemap-wrapper .sitemaplist{display:inline-block;text-align:left}
 .sitemap-wrapper a{text-decoration:none}
 .sitemap-wrapper ul{margin:0;padding:0;list-style:none}

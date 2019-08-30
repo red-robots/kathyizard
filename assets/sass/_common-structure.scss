@@ -2318,13 +2318,16 @@ h3.sectionTitle {
 		color: $dark_blue;
 		margin: 0 0;
 	}
+	p {
+		margin-top: 0;
+	}
 }
 .pagedefault {
 	min-height: 35em;
 }
 .sitemap-wrapper {
 	text-align: center;
-	padding-top: 5%;
+	padding-top: 3%;
 	padding-bottom: 50px;
 	.sitemaplist {
 		display: inline-block;

@@ -16,13 +16,16 @@ function my_login_logo() {
   $logo_url = ($logoImg) ? $logoImg[0] : '';
   if($custom_logo_id) { ?>
   <style type="text/css">
+    body.login {
+      background: #e8f7fb!important;
+    }
     body.login div#login h1 a {
       <?php if($logo_url) { ?>
         background-image: url(<?php echo $logo_url; ?>);
       <?php } ?> 
       background-size: contain;
       width: 100%;
-      height: 67px;
+      height: 85px;
     }
   </style>
 <?php }
@@ -31,7 +34,7 @@ add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 // Change Link
 function loginpage_custom_link() {
-	return the_permalink();
+	return get_site_url();
 }
 add_filter('login_headerurl','loginpage_custom_link');
 
