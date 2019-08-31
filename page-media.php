@@ -97,6 +97,7 @@ get_header(); ?>
 				<?php
 					$media_title = get_field('media_title');  
 					$media_text = get_field('media_text');  
+					$media_text2 = email_obfuscator($media_text);
 				?>
 				<?php if ( $videos = get_field('videos') ) { ?>
 				<section class="videoboxes clear">
@@ -139,7 +140,7 @@ get_header(); ?>
 												<?php if ($media_title) { ?>
 												<h6 class="mtitle"><?php echo $media_title ?></h6>
 												<?php } ?>
-												<span class="mtext"><?php echo $media_text ?></span>
+												<span class="mtext"><?php echo $media_text2 ?></span>
 											</span>
 										</span>
 										<img src="<?php echo $px2 ?>" alt="" aria-hidden="true">

@@ -42,7 +42,13 @@ get_header(); ?>
 					<div class="entry-content clear <?php echo $has_top_image;?> <?php echo $has_sidebar;?>">
 						<div class="wrapper">
 							<div class="textwrap">
-								<div class="maintext"><?php the_content(); ?></div>
+								<div class="maintext">
+									<?php 
+										$str = get_the_content(); 
+										$main_content = email_obfuscator($str);
+										echo $main_content;
+									?>
+								</div>
 								<?php if ($photos) { ?>
 								<div class="eventphotos">
 									<?php foreach ($photos as $pp) { 

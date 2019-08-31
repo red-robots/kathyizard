@@ -51,13 +51,14 @@ get_header(); ?>
 					<?php  
 					$row2 = get_field('row2');
 					$row2_text = $row2['row2_text_content'];
+					$main_content =	email_obfuscator($row2_text);
 					?>
 
 					<div class="two-column-box clear row2">
 						<div class="flexrow">
 							<div class="col left full">
 								<?php if ($row2_text) { ?>
-								<div class="text2"><?php echo $row2_text ?></div>	
+								<div class="text2"><?php echo $main_content ?></div>	
 								<?php } ?>
 							</div>
 						</div>
