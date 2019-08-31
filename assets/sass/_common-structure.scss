@@ -453,6 +453,10 @@ body.admin-bar {
 			left: 0;
 		}
 	}
+	.owl-stage-outer {
+		position: relative;
+		z-index: 50;
+	}
 	.numwrap {
 		position: absolute;
 		left: 0;
@@ -782,7 +786,7 @@ body.admin-bar {
 		padding: 30px;
 		color: #424e74;
 		font-family: $font_cursive;
-		font-size: 22px;
+		font-size: 18px;
 		font-weight: 300;
 		font-style: italic;
 		line-height: 1.7;

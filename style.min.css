@@ -1821,6 +1821,7 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 @media(min-width:700px){.slides-wrapper .owl-carousel .owl-item.center img{width:auto;height:340px}
 }.slides-wrapper .owl-carousel .owl-item:not(.center) img{height:260px;width:auto;position:absolute;left:50%;-ms-transform:translateX(-50%);transform:translateX(-50%);-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);margin-top:7%}
 .slides-wrapper .owl-carousel:after{content:'';display:block;width:calc(100% - 29px);width:-moz-calc(100% - 29px);height:calc(100% - 29px);height:-moz-calc(100% - 29px);border:15px solid #fff;opacity:.8;position:absolute;top:0;left:0}
+.slides-wrapper .owl-stage-outer{position:relative;z-index:50}
 .slides-wrapper .numwrap{position:absolute;left:0;bottom:-5px;z-index:200;width:100%;text-align:center}
 .slides-wrapper .slidenum{font-family:"Hind",sans-serif;color:#FFF;font-size:13px;font-weight:700;letter-spacing:1px;display:inline-block;position:relative;top:-26px;width:auto}
 .slides-wrapper .owl-nav{width:100%;margin:0 auto;position:absolute;bottom:23px;left:0;z-index:30;text-align:center}
@@ -1876,7 +1877,7 @@ h3{font-family:"Josefin Sans",sans-serif;font-weight:600;font-size:28px;line-hei
 .section-quote .textwrap{position:relative;z-index:5}
 .section-quote .imagecol{width:100%;height:300px;float:left;background-size:contain;background-position:top right;background-repeat:no-repeat}
 @media(min-width:700px){.section-quote .imagecol{height:100%;position:absolute;top:0;right:0;background-size:contain;background-position:top right;margin-bottom:0}
-}.section-quote .textcol{width:100%;padding:30px;color:#424e74;font-family:"Noto Serif",serif;font-size:22px;font-weight:300;font-style:italic;line-height:1.7;position:relative;z-index:10;text-align:center;float:left}
+}.section-quote .textcol{width:100%;padding:30px;color:#424e74;font-family:"Noto Serif",serif;font-size:18px;font-weight:300;font-style:italic;line-height:1.7;position:relative;z-index:10;text-align:center;float:left}
 @media(min-width:700px){.section-quote .textcol{width:70%;padding:50px 40px}
 }.section-quote .textcol p{margin-top:0}
 .section-quote .textcol p:last-child{margin-bottom:0}
