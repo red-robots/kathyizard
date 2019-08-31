@@ -62,17 +62,7 @@ get_header(); ?>
 
 						<?php if ($sidebar_content) { 
 							$str = $sidebar_content;
-							$emails_matched = extract_emails_from($sidebar_content);
-							
-							if($emails_matched) {
-								foreach($emails_matched as $em) {
-									$encrypted = antispambot($em,1);
-									$replace = 'mailto:'.$em;
-									$new_mailto = 'mailto:'.$encrypted;
-									$str = str_replace($replace, $new_mailto, $str);
-								}
-							}
-							$sidebar_content = $str;
+							$sidebar_content = email_obfuscator($str);
 						?>
 						<div class="sidebardiv">
 							<div class="wrap">
