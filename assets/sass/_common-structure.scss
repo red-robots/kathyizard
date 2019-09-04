@@ -2176,7 +2176,7 @@ h3.sectionTitle {
 		z-index: 5;
 	}
 	.txtcol {
-		width: 65%;
+		width: 100%;
 		float: left;
 		font-family: $font_heading;
 		font-size: 18px;
@@ -2184,22 +2184,36 @@ h3.sectionTitle {
 		line-height: 1.3;
 		@include flexbox();
 		@include flexbox-align-items(center);
+		@include tab {
+			width: 65%;
+		}
 		h2 {
 			font-family: $font_heading;
-			font-size: 2.2em !important;
+			font-size: 1.8em !important;
 			font-weight: 400!important;
+			line-height: 1.2;
 			margin: 0 0 10px;
+			@include tab {
+				font-size: 2.2em !important;
+			}
 		}
 		.pad {
 			padding: 10%;
 		}
 	}
 	.imgcol {
-		width: 34.8%;
-		float: right;
+		width: 100%;
+		float: left;
+		@include tab {
+			width: 34.8%;
+			float: right;
+		}
 		.pad {
-			padding: 10%;
+			padding: 8%;
 			float: left;
+			@include tab {
+				padding: 10%;
+			}
 		}
 		img {
 			width: 100%;
