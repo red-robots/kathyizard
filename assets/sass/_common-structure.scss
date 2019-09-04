@@ -143,6 +143,7 @@ h3 {
 	width: 100%;
 	float: left;
 	padding-top: 50px;
+	position: relative;
 	@include tab {
 		padding-top: 0;
 	}
@@ -207,6 +208,8 @@ h3 {
 	z-index: 1000;
 	width: 100%;
 	background: #FFF;
+	transition: all ease-out .3s;
+	box-shadow: 0px 0px 6px 0px transparent;
 	@include tab {
 		height: 230px;
 	}
@@ -260,12 +263,16 @@ h3 {
 			top: 0;
 			left: 0;
 			height: auto;
+			box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.26);
 			.logo a {
 				width: 110px;
 			}
 			.wrapper.top {
-				padding-top: 10px;
-				padding-bottom: 10px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			.main-navigation .menu > li > a {
+				padding: 20px 0 18px;
 			}
 		}
 	}
@@ -1588,11 +1595,12 @@ body.admin-bar {
 	}
 	.caption {
 		position: absolute;
-		top: 0;
+		bottom: 0;
 		left: 0;
 		width: 100%;
 		height: 100%;
 		background: rgba(255,255,255,.88);
+		overflow: auto;
 		@include flexbox();
 		@include flexbox-wrap(center);
 		@include flexbox-align-items(center);
@@ -1600,7 +1608,7 @@ body.admin-bar {
 		opacity: 0;
 		visibility: hidden;
 		.wrap {
-			background: rgba(255,255,255,.1);
+			// background: rgba(255,255,255,.85);
 			padding: 20px;
 			transition: all ease-out .4s;
 			margin-top: 20px;
@@ -1635,6 +1643,7 @@ body.admin-bar {
 		.caption {
 			opacity: 1;
 			visibility: visible;
+			height: 100%;
 			.wrap {
 				margin-top: 0;
 			}
@@ -2379,7 +2388,7 @@ body.admin-bar .site-content {
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
-	
+
 /* Mobile */
 @media screen and (max-width:767px) {
 	.site-header {
