@@ -2375,10 +2375,16 @@ body.admin-bar .site-content {
 	padding-top: 30px;
 }
 
+.site {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+	
 /* Mobile */
 @media screen and (max-width:767px) {
 	.site-header {
 		.main-navigation {
+			background: transparent!important;
 			.wrapper {
 				padding-left: 10px;
 				padding-right: 10px;
