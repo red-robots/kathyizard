@@ -20,16 +20,17 @@ get_header(); ?>
 					$video_thumbnail = $row1['video_thumbnail'];
 					$square = get_bloginfo('template_url') . '/images/px.png';
 					$px2 = get_bloginfo('template_url') . '/images/px2.png';
+					$styleBg = ($video_thumbnail) ? ' style="background-image:url('.$video_thumbnail['url'].')"':'';
 					?>
 
 					<div class="two-column-box clear">
 						<div class="flexrow">
-							<div class="col left">
+							<div class="col colbg left"<?php echo $styleBg ?>>
 								<?php if ($video_link && $video_thumbnail) { ?>
 								<div class="video">
 									<a data-fancybox href="<?php echo $video_link; ?>" target="_blank">
-										<img src="<?php echo $square ?>" alt="" aria-hidden="true">
-										<span class="thumb" style="background-image:url(<?php echo $video_thumbnail['url']; ?>)"></span>
+										<img src="<?php echo $px2 ?>" alt="" aria-hidden="true">
+										<span class="thumb" style="background-image:url(<?php echo $video_thumbnail['url']; ?>);display:none;"></span>
 									</a>
 									<?php if ($video_caption) { ?>
 									<div class="caption">

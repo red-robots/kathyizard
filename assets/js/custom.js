@@ -9,14 +9,14 @@ jQuery(document).ready(function ($) {
 
 	var is_page404 = ( $(".error-404").length ) ? true : false;
 
-	if(is_page404==false) {
-		$(document).on('scroll', function(){
-			$('.site-header').addClass('fixed');
-			if($(window).scrollTop() == 0){
-				$('.site-header').removeClass('fixed');
-			}
-		});
-	}
+	$(window).scroll(function(){
+		var sticky = $('#masthead'),
+		  	scroll = $(window).scrollTop();
+
+		if (scroll >= 100) sticky.addClass('fixed');
+		else sticky.removeClass('fixed');
+	});
+
 
 	/* Open a Letter to Readers Pop-up */
 	$(document).on('click','#closeLetter', function(e){
