@@ -49,9 +49,28 @@
 			            </h1>
 			        <?php } ?>
 
-			        <div class="contact">
-			        	<a class="hbtn" href="<?php echo get_site_url() ?>/contact/">Contact Kathy</a>
+			        <?php
+			        $ctaBtn = get_field('ctaBtn','option');
+			        $ctaBtnLink = get_field('ctaBtnLink','option');
+			        $hasLink = ($ctaBtnLink) ? string_cleaner($ctaBtnLink):'';
+			        $is_email = extract_emails_from($ctaBtnLink);
+			        $theEmails = array();
+			        if($is_email) {
+			        	foreach($is_email as $em) {
+			        		$theEmails[] = antispambot($em,1);
+			        	}
+			        }
+			        $emailList = ($theEmails) ? implode(",",$theEmails):''; ?>
+					<?php if ($ctaBtn && $hasLink) { ?>
+					<div class="contact">
+						<?php if ($emailList) { ?>
+						<a class="hbtn" href="mailto:<?php echo $emailList; ?>"><?php echo $ctaBtn ?></a>
+						<?php } else { ?>
+			        	<a class="hbtn" href="<?php echo $ctaBtnLink; ?>"><?php echo $ctaBtn ?></a>
+			        	<?php } ?>
 			        </div>
+					<?php } ?>
+			        
 				</div><!-- wrapper -->
 
 			
