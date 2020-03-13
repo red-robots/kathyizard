@@ -2531,6 +2531,9 @@ body.admin-bar .site-content {
 }
 
 /* Blog Page */
+#primary.page-blog .site-main {
+	min-height: 30em;
+}
 .latestblog {
 	.col {
 		width: 100%;

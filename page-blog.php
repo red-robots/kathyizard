@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area clear page-fullwidth-image page-speaking">
+	<div id="primary" class="content-area clear page-fullwidth-image page-blog">
 		<main id="main" class="site-main clear" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -31,6 +31,7 @@ get_header(); ?>
 				if($posts) { 
 				$latest = $posts[0]; 
 				$lpID 	= $latest->ID;
+				$lpTitle = $latest->post_title;
 				// $thumbId = get_post_thumbnail_id($latest);
 				// $mainImg = wp_get_attachment_image_src($thumbId,'medium_large');
 				$mainImg = get_field("thumbnail_image",$lpID);
@@ -48,7 +49,7 @@ get_header(); ?>
 							<?php } ?>
 							<div class="col textcol">
 								<div class="inside">
-									<h2 class="posttitle"><?php echo get_the_title(); ?></h2>
+									<h2 class="posttitle"><?php echo $lpTitle; ?></h2>
 									<div class="text"><?php echo $mainTxt; ?></div>
 									<div class="btndiv"><a href="<?php echo get_permalink($lpID); ?>" class="button lblue">Read More</a></div>
 								</div>

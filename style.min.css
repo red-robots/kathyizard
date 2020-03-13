@@ -2176,7 +2176,8 @@ body.admin-bar .site-content{padding-top:30px}
 .site-header .social-media{left:0;top:0}
 .site-header .contact{position:absolute;top:-40px;right:0}
 .site-header .contact a{color:#FFF;border-color:#FFF}
-}.latestblog .col{width:100%;position:relative}
+}#primary.page-blog .site-main{min-height:30em}
+.latestblog .col{width:100%;position:relative}
 .latestblog.twocol .col{width:100%}
 @media(min-width:700px){.latestblog.twocol .col{width:50%}
 }.latestblog .imagecol img{width:100%;height:auto;float:left}
