@@ -2176,4 +2176,66 @@ body.admin-bar .site-content{padding-top:30px}
 .site-header .social-media{left:0;top:0}
 .site-header .contact{position:absolute;top:-40px;right:0}
 .site-header .contact a{color:#FFF;border-color:#FFF}
-}
+}.latestblog .col{width:100%;position:relative}
+.latestblog.twocol .col{width:100%}
+@media(min-width:700px){.latestblog.twocol .col{width:50%}
+}.latestblog .imagecol img{width:100%;height:auto;float:left}
+.latestblog .imagecol div.image{width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:top center;background-repeat:no-repeat;position:relative}
+.latestblog .imagecol div.image:before{content:"";display:block;width:calc(100% - 30px);height:calc(100% - 30px);position:absolute;top:0;left:0;border:15px solid rgba(255,255,255,0.65)}
+.latestblog .textcol{background:#487497;color:#FFF}
+.latestblog .textcol .posttitle{color:#c4f7fd;text-align:left;font-family:"Josefin Sans",sans-serif;font-size:25px;font-weight:normal;margin:2px 0 10px}
+.latestblog .textcol .inside{padding:10% 6%}
+.latestblog .textcol .btndiv{margin-top:25px}
+.bloglist{margin-top:20px;margin-bottom:40px}
+.bloglist .flexrow{margin-left:-15px;margin-right:-15px}
+.bloglist .post-item{width:100%;margin:10px 0}
+@media(min-width:700px){.bloglist .post-item{width:33.3%}
+}.bloglist .inside{padding:15px;float:left}
+.bloglist .post-image{width:100%;float:left;position:relative;margin-bottom:10px;background-color:#e8e8e8}
+.bloglist .post-image span.feat-image{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.bloglist .nopic .post-image:before{content:"Photo Unavailable";display:block;width:100%;text-align:center;position:absolute;top:50%;left:0;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);color:#a5a5a5;font-size:15px}
+.bloglist img.placeholder{width:100%;height:auto;float:left}
+.bloglist .post-text{width:100%;float:left}
+.bloglist .post-text h2.ptitle{margin:0 0 5px;font-size:18px;font-weight:600;line-height:1.2;color:#487497}
+.bloglist .post-text .excerpt{font-size:15px;line-height:1.2}
+.bloglist .post-text .btndiv{margin-top:12px}
+.bloglist .post-text .btndiv a{display:inline-block;text-decoration:none;border:1px solid #487497;padding:5px 10px 6px;font-size:13px;line-height:1;border-radius:150px}
+.bloglist .post-text .btndiv a:hover{background:#487497;color:#FFF}
+.bloglist #pagination{margin-top:20px}
+.single-blog .featured-image{width:100%;float:left;position:relative}
+.single-blog .featured-image img{width:100%;height:auto;float:left}
+.single-blog .featured-image div.image{width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:top center;background-repeat:no-repeat}
+.single-blog .featured-image div.image:before{content:"";display:block;width:calc(100% - 30px);height:calc(100% - 30px);position:absolute;top:0;left:0;border:15px solid rgba(255,255,255,0.65)}
+.single-blog .entry-title{margin:25px 0 20px}
+.single-blog .post-wrapper{width:100%;float:left;padding-top:75px;padding-bottom:100px;min-height:35em}
+.single-blog .categories{width:100%;float:left}
+.single-blog .categories a{display:inline-block;text-decoration:none;font-family:"Josefin Sans",sans-serif;font-weight:700;font-size:12px;line-height:1.5;color:#71b4d5;text-transform:uppercase;margin-bottom:5px;position:relative}
+.single-blog .categories a:hover{color:#aad2e6}
+.single-blog .textwrap{width:100%;float:left}
+@media(min-width:700px){.single-blog .textwrap{width:66%}
+}.single-blog .sidebar{width:100%;float:left;background:#487497;color:#FFF}
+@media(min-width:700px){.single-blog .sidebar{width:30%;float:right}
+}.sidebar{padding:20px;line-height:1.3}
+.sidebar h3.widgettitle{font-family:"Josefin Sans",sans-serif;font-weight:700;font-size:18px;line-height:1.5;color:#c4f7fd;letter-spacing:2px;text-transform:uppercase;margin-top:0;margin-bottom:10px;position:relative}
+.sidebar ul.archives{margin:0;padding:0;list-style:none}
+.sidebar ul.archives a{display:inline-block;text-decoration:none;color:#FFF;font-size:16px;line-height:1.2;padding:3px 0}
+.sidebar ul.archives a:hover{opacity:.5}
+body.archive .bloglist{margin-top:0}
+.archives-page .flexrow{margin-left:-15px;margin-right:-15px}
+.archives-page .page-title{font-family:"Josefin Sans",sans-serif;font-weight:500;font-size:28px;line-height:1.5;color:#71b4d5}
+.archives-page .site-main{min-height:30em;padding-bottom:80px}
+.archives-page .entry-title{font-family:"Josefin Sans",sans-serif;font-weight:500;font-size:20px;line-height:1.2;color:#71b4d5;margin:0 0 5px}
+.archives-page .entry-title a{font-size:18px;font-weight:600;line-height:1.2;color:#487497;text-decoration:none;display:inline-block}
+.archives-page .entry-content{font-size:15px;line-height:1.3}
+.archives-page .entry-header{margin-bottom:10px;width:100%;float:left}
+.archives-page .excerpt{width:100%;float:left;font-size:15px;line-height:1.2}
+.archives-page .entry-footer{font-size:14px}
+.archives-page .entry-footer .edit-link{margin-left:10px}
+.archives-page .entry-meta{font-size:14px;margin-bottom:0}
+.archives-page .entry-meta .updated{display:none}
+.archives-page .hentry{width:100%}
+@media(min-width:700px){.archives-page .hentry{width:33.3%}
+}.archives-page .hentry .inside{padding:15px}
+#pagination a,#pagination span{display:inline-block;padding:5px 8px;border:1px solid #487497;font-size:16px;line-height:1}
+#pagination a{text-decoration:none;color:#487497}
+#pagination span.current{background:#487497;color:#FFF}
